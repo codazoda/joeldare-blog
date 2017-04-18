@@ -2,7 +2,7 @@ baseURL = "http://www.joeldare.com/"
 languageCode = "en-us"
 title = "Joel Dare"
 author = "Joel Dare"
-theme = "hugo-black-and-light-theme"
+theme = "hugo-joeldare"
 
 [params]
   sitename = "Joel Dare"

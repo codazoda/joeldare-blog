@@ -1,8 +1,8 @@
-+++
-date = "2017-03-17"
-title = "Simple Instagram Like Bot"
-lastmod = "2017-04-18"
-+++
+---
+date: "2016-04-26"
+title: "Simple Instagram Like Bot"
+lastmod: "2017-04-18"
+---
 This is a very simple Instagram like bot written in JavaScript.
 
 Google Chrome Extension
