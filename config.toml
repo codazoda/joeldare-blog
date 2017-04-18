@@ -1,0 +1,18 @@
+baseURL = "http://www.joeldare.com/"
+languageCode = "en-us"
+title = "Joel Dare"
+author = "Joel Dare"
+theme = "hugo-black-and-light-theme"
+
+[params]
+  sitename = "Joel Dare"
+
+[[menu.main]]
+    name = "Projects"
+    url  = "https://github.com/davidhampgonsalves/hugo-black-and-light-theme"
+[[menu.main]]
+    name = "About"
+    url  = "https://github.com/davidhampgonsalves/hugo-black-and-light-theme"
+[[menu.main]]
+    name = "Github"
+    url  = "https://github.com/codazoda"
