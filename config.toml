@@ -9,11 +9,11 @@ publishDir = "docs"
   sitename = "Joel Dare"
 
 [[menu.main]]
-    name = "Projects"
-    url  = "https://github.com/davidhampgonsalves/hugo-black-and-light-theme"
-[[menu.main]]
-    name = "About"
-    url  = "https://github.com/davidhampgonsalves/hugo-black-and-light-theme"
+    name = "Email"
+    url  = "mailto:joel@joeldare.com"
 [[menu.main]]
     name = "Github"
     url  = "https://github.com/codazoda"
+[[menu.main]]
+    name = "Wiki"
+    url  = "http://www.joeldare.com/wiki"
