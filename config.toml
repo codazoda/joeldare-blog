@@ -1,4 +1,4 @@
-baseURL = "http://blog.joeldare.com/"
+baseURL = "https://www.joeldare.com/blog/"
 languageCode = "en-us"
 title = "Joel Dare"
 author = "Joel Dare"
@@ -16,4 +16,4 @@ publishDir = "docs"
     url  = "https://github.com/codazoda"
 [[menu.main]]
     name = "Wiki"
-    url  = "http://www.joeldare.com/wiki"
+    url  = "https://www.joeldare.com/wiki"
