@@ -22,7 +22,7 @@ To compile the site and test it locally run the following command.
 
     hugo serve -w
 
-To compile the static files into the `/public` directory run the following command.
+To compile the static files into the `/docs` directory run the following command.
 
 	hugo
 
