@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Joel Dare</title>
-    <link>http://blog.joeldare.com/</link>
+    <link>https://www.joeldare.com/blog/</link>
     <description>Recent content on Joel Dare</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 26 Apr 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://blog.joeldare.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.joeldare.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Simple Instagram Like Bot</title>
-      <link>http://blog.joeldare.com/post/simple-instagram-like-bot/</link>
+      <link>https://www.joeldare.com/blog/post/simple-instagram-like-bot/</link>
       <pubDate>Tue, 26 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.joeldare.com/post/simple-instagram-like-bot/</guid>
+      <guid>https://www.joeldare.com/blog/post/simple-instagram-like-bot/</guid>
       <description>This is a very simple Instagram like bot written in JavaScript.
 Google Chrome Extension The easiest and safest tool to use is my Magis extension for Google Chrome. Gain new followers and likes on Instagram. Magis reminds you to be active and provides keyboard shortcuts to make liking and commenting fast. Set a goal to like and comment on 10 posts an hour to significantly increase your Instagram engagement with just two minutes of work.</description>
     </item>

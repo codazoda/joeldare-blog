@@ -2,29 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blog.joeldare.com/post/simple-instagram-like-bot/</loc>
+    <loc>https://www.joeldare.com/blog/post/simple-instagram-like-bot/</loc>
     <lastmod>2017-04-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.joeldare.com/categories/</loc>
+    <loc>https://www.joeldare.com/blog/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.joeldare.com/</loc>
-    <lastmod>2017-04-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.joeldare.com/post/</loc>
+    <loc>https://www.joeldare.com/blog/</loc>
     <lastmod>2017-04-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.joeldare.com/tags/</loc>
+    <loc>https://www.joeldare.com/blog/post/</loc>
+    <lastmod>2017-04-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.joeldare.com/blog/tags/</loc>
     <priority>0</priority>
   </url>
   
