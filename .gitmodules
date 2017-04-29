@@ -1,0 +1,3 @@
+[submodule "themes/hugo-joeldare-theme"]
+	path = themes/hugo-joeldare-theme
+	url = git@github.com:codazoda/hugo-joeldare-theme.git
