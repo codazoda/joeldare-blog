@@ -8,7 +8,7 @@ echo $COLS wide
 
 echo ---[ Blog Admin ]---
 echo
-echo [S] Start Server
+echo [S] Start Local Server
 echo [T] Test in Browser
 echo [G] Generate Site
 echo [P] Pull on Server
