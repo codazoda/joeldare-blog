@@ -10,6 +10,7 @@ echo ---[ Blog Admin ]---
 echo
 echo [S] Start Server
 echo [B] Open Browser
+echo [G] Generate Site
 echo [Q] Quit
 echo [P] Pull on Server
 echo
@@ -22,11 +23,15 @@ echo
 
 case $CHAR in
   s)
+    hugo serve &
     ;;
   b)
     ;;
-  p)
+  g)
     hugo
+    ;;
+  p)
+    echo Connecting to joeldare.com.
     ssh root@joeldare.com "cd /var/www/joeldare-blog;git pull"
     ;;
   q)
