@@ -2,6 +2,7 @@
 date: "2016-04-26"
 title: "Simple Instagram Like Bot"
 lastmod: "2017-04-18"
+tags: ["tech"]
 ---
 This is a very simple Instagram like bot written in JavaScript.
 
