@@ -2,7 +2,7 @@ baseURL = "https://www.joeldare.com/blog"
 languageCode = "en-us"
 title = "Joel Dare"
 author = "Joel Dare"
-theme = "hugo-joeldare"
+theme = "hugo-joeldare-theme"
 publishDir = "docs"
 
 [params]
