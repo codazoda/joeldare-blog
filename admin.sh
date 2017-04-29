@@ -9,10 +9,10 @@ echo $COLS wide
 echo ---[ Blog Admin ]---
 echo
 echo [S] Start Server
-echo [B] Open Browser
+echo [T] Test in Browser
 echo [G] Generate Site
-echo [Q] Quit
 echo [P] Pull on Server
+echo [Q] Quit
 echo
 printf "> "
 
@@ -25,7 +25,8 @@ case $CHAR in
   s)
     hugo serve &
     ;;
-  b)
+  t)
+    open http://localhost:1313/blog/
     ;;
   g)
     hugo
