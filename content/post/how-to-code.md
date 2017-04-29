@@ -10,7 +10,7 @@ It's easy to start giving your computer instructions. You've already got the too
 
 Select the *View* menu, then *Developer*, and *JavaScript Console*. The menu will look similar to this.
 
-![JavaScript Console Menu](image/javascript-console.png)
+![JavaScript Console Menu](/blog/image/javascript-console.png)
 
 ## Hello World
 
@@ -20,7 +20,7 @@ It's tradition to have your first program say hello to the world. Type the follo
 
 Your computer should respond by showing you a dialog that says, "Hello World". It will look something like the alert box below.
 
-![Alert Dialog](image/alert-dialog.png)
+![Alert Dialog](/blog/image/alert-dialog.png)
 
 JavaScript is case sensitive. If you got an error, instead of the dialog, try the command again. This time, make sure that you use capital and lowercase letters exactly the way it's listed above.
 
