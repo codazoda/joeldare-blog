@@ -11,7 +11,7 @@ echo
 echo [S] Start Server
 echo [B] Open Browser
 echo [Q] Quit
-echo [U] Upload to Server
+echo [P] Pull on Server
 echo
 printf "> "
 
@@ -24,6 +24,10 @@ case $CHAR in
   s)
     ;;
   b)
+    ;;
+  p)
+    hugo
+    ssh root@joeldare.com "cd /var/www/joeldare-blog;git pull"
     ;;
   q)
     echo Then why even start?

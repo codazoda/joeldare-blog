@@ -6,10 +6,21 @@
     <description>Recent content in Tech on Joel Dare</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jun 2016 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.joeldare.com/blog/tags/tech/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Code</title>
+      <link>https://www.joeldare.com/blog/post/how-to-code/</link>
+      <pubDate>Tue, 07 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.joeldare.com/blog/post/how-to-code/</guid>
+      <description>Give Your Computer Instructions It&amp;rsquo;s easy to start giving your computer instructions. You&amp;rsquo;ve already got the tool you need; your web browser. Lets open a special window called the console.
+Select the View menu, then Developer, and JavaScript Console. The menu will look similar to this.
+Hello World It&amp;rsquo;s tradition to have your first program say hello to the world. Type the following into the console and press enter.</description>
+    </item>
     
     <item>
       <title>Simple Instagram Like Bot</title>

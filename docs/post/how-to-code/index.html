@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <base href="https://www.joeldare.com/blog">
+    
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400|Old+Standard+TT:400' rel='stylesheet' type='text/css'>
+
+    <link rel="icon" type="image/png" href="/favicon_16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon_32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon_128x128.png" sizes="128x128">
+
+    <title>
+      
+      
+         How to Code 
+      
+    </title>
+    <link rel="canonical" href="https://www.joeldare.com/blog/post/how-to-code/">
+
+    <style>
+  * {
+    border:0;
+    font:inherit;
+    font-size:100%;
+    vertical-align:baseline;
+    margin:0;
+    padding:0;
+    color: black;
+  }
+
+  body {
+    font-family:'Open Sans', 'Myriad Pro', Myriad, sans-serif;
+    font-size:17px;
+    line-height:160%;
+    color:#1d1313;
+    max-width:700px;
+    margin:auto;
+  }
+
+  p {
+    margin: 20px 0;
+  }
+
+  a img {
+    border:none;
+  }
+
+  img {
+    margin: 10px auto 10px auto;
+    max-width: 100%;
+    display: block;
+  }
+
+  pre, code {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    background-color: #f7f7f7;
+  }
+
+  code {
+    font-size: 12px;
+    padding: 4px;
+  }
+
+  pre {
+    margin-top: 0;
+    margin-bottom: 16px;
+    word-wrap: normal;
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+  }
+
+  pre>code {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    word-break: normal;
+    white-space: pre;
+    background: transparent;
+    border: 0;
+  }
+
+  pre code {
+    display: inline;
+    max-width: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0;
+  }
+
+  pre code::before,
+  pre code::after {
+    content: normal;
+  }
+
+  em,q,em,dfn {
+    font-style:italic;
+  }
+
+  .sans,html .gist .gist-file .gist-meta {
+    font-family:"Open Sans","Myriad Pro",Myriad,sans-serif;
+  }
+
+  .mono,pre,code,tt,p code,li code {
+    font-family:Menlo,Monaco,"Andale Mono","lucida console","Courier New",monospace;
+  }
+
+  strong {
+    font-weight:600;
+  }
+
+  q:before {
+    content:"\201C";
+  }
+
+  q:after {
+    content:"\201D";
+  }
+
+  del,s {
+    text-decoration:line-through;
+  }
+
+  blockquote {
+    font-family:"Old Standard TT",serif;
+    text-align:center;
+    padding:50px;
+  }
+
+  blockquote p {
+    display:inline-block;
+    font-style:italic;
+  }
+
+  blockquote:before,blockquote:after {
+    font-family:"Old Standard TT",serif;
+    content:'\201C';
+    font-size:35px;
+    color:#403c3b;
+  }
+
+  blockquote:after {
+    content:'\201D';
+  }
+
+  hr {
+    width:40%;
+    height: 1px;
+    background:#403c3b;
+    margin: 25px auto;
+  }
+
+  h1 {
+    font-size:35px;
+  }
+
+  h2 {
+    font-size:28px;
+  }
+
+  h3 {
+    font-size:22px;
+    margin-top:18px;
+  }
+
+  h1 a,h2 a,h3 a {
+    text-decoration:none;
+  }
+
+  h1,h2 {
+    margin-top:28px;
+  }
+
+  #sub-header, time {
+    color:#403c3b;
+    font-size:13px;
+  }
+
+  #sub-header {
+    margin: 0 4px;
+  }
+
+  #nav h1 a {
+    font-size:35px;
+    color:#1d1313;
+    line-height:120%;
+  }
+
+  .posts_listing a,#nav a {
+    text-decoration: none;
+  }
+
+  li {
+    margin-left: 20px;
+  }
+
+  ul li {
+    margin-left: 5px;
+  }
+
+  ul li {
+    list-style-type: none;
+  }
+  ul li:before {
+    content:"\00BB \0020";
+  }
+
+  #nav ul li:before, .posts_listing li:before {
+    content:'';
+    margin-right:0;
+  }
+
+  #content {
+    text-align:left;
+    width:100%;
+    font-size:15px;
+    padding:60px 0 80px;
+  }
+
+  #content h1,#content h2 {
+    margin-bottom:5px;
+  }
+
+  #content h2 {
+    font-size:25px;
+  }
+
+  #content .entry-content {
+    margin-top:15px;
+  }
+
+  #content time {
+    margin-left:3px;
+  }
+
+  #content h1 {
+    font-size:30px;
+  }
+
+  .highlight {
+    margin: 10px 0;
+  }
+
+  .posts_listing {
+    margin:0 0 50px;
+  }
+
+  .posts_listing li {
+    margin:0 0 25px 15px;
+  }
+
+  .posts_listing li a:hover,#nav a:hover {
+    text-decoration: underline;
+  }
+
+  #nav {
+    text-align:center;
+    position:static;
+    margin-top:60px;
+  }
+
+  #nav ul {
+    display: table;
+    margin: 8px auto 0 auto;
+  }
+
+  #nav li {
+    list-style-type:none;
+    display:table-cell;
+    font-size:15px;
+    padding: 0 20px;
+  }
+
+  #links {
+    margin: 50px 0 0 0;
+  }
+
+  #links :nth-child(2) {
+    float:right;
+  }
+
+  #not-found {
+    text-align: center;
+  }
+
+  #not-found a {
+    font-family:"Old Standard TT",serif;
+    font-size: 200px;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 225px;
+  }
+
+  @media (max-width: 750px) {
+    body {
+      padding-left:20px;
+      padding-right:20px;
+    }
+
+    #nav h1 a {
+      font-size:28px;
+    }
+
+    #nav li {
+      font-size:13px;
+      padding: 0 15px;
+    }
+
+    #content {
+      margin-top:0;
+      padding-top:50px;
+      font-size:14px;
+    }
+
+    #content h1 {
+      font-size:25px;
+    }
+
+    #content h2 {
+      font-size:22px;
+    }
+
+    .posts_listing li div {
+      font-size:12px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    body {
+      padding-left:20px;
+      padding-right:20px;
+    }
+
+    #nav h1 a {
+      font-size:22px;
+    }
+
+    #nav li {
+      font-size:12px;
+      padding: 0 10px;
+    }
+
+    #content {
+      margin-top:0;
+      padding-top:20px;
+      font-size:12px;
+    }
+
+    #content h1 {
+      font-size:20px;
+    }
+
+    #content h2 {
+      font-size:18px;
+    }
+
+    .posts_listing li div{
+      font-size:12px;
+    }
+  }
+</style>
+
+
+    
+  </head>
+
+  <body>
+    <section id=nav>
+      <h1><a href="">Joel Dare</a></h1>
+      <ul>
+        
+          <li><a href="mailto:joel@joeldare.com">Email</a></li>
+        
+          <li><a href="https://github.com/codazoda">Github</a></li>
+        
+          <li><a href="https://www.joeldare.com/wiki">Wiki</a></li>
+        
+      </ul>
+    </section>
+
+
+<section id=content>
+  <h1> How to Code </h1>
+
+  <div id=sub-header>
+    Updated June 2016 · Created June 2016
+  </div>
+
+  <div class="entry-content">
+    
+
+<h2 id="give-your-computer-instructions">Give Your Computer Instructions</h2>
+
+<p>It&rsquo;s easy to start giving your computer instructions. You&rsquo;ve already got the tool you need; your web browser. Lets open a special window called the <em>console</em>.</p>
+
+<p>Select the <em>View</em> menu, then <em>Developer</em>, and <em>JavaScript Console</em>. The menu will look similar to this.</p>
+
+<p><img src="image/javascript-console.png" alt="JavaScript Console Menu" /></p>
+
+<h2 id="hello-world">Hello World</h2>
+
+<p>It&rsquo;s tradition to have your first program say hello to the world. Type the following into the console and press enter.</p>
+
+<pre><code>alert(&quot;Hello World&quot;)
+</code></pre>
+
+<p>Your computer should respond by showing you a dialog that says, &ldquo;Hello World&rdquo;. It will look something like the alert box below.</p>
+
+<p><img src="image/alert-dialog.png" alt="Alert Dialog" /></p>
+
+<p>JavaScript is case sensitive. If you got an error, instead of the dialog, try the command again. This time, make sure that you use capital and lowercase letters exactly the way it&rsquo;s listed above.</p>
+
+<p>Click the <em>OK</em> button and the dialog will close. Congratulations, you just wrote code!</p>
+
+<p>The first word <code>alert</code> is a <em>command</em> built into JavaScript. JavaScript is a programming language that works in the web browser. The <code>alert</code> command takes a parameter, enclosed in parentheses, that tells the browser what you want to display.</p>
+
+<h2 id="data-types">Data Types</h2>
+
+<p>There are three main data types you should know about. They are <em>String</em>, <em>Number</em>, and <em>Boolean</em>. You already used a string in the <code>alert</code> command above. A string is just like a quote in a book and is surrounded by quotes. Numbers are entered without the quotes. A boolean is either <code>true</code> or <code>false</code>.</p>
+
+<p>Lets try another example. Type the following command into the console.</p>
+
+<pre><code>alert(&quot;2+2&quot;)
+</code></pre>
+
+<p>You&rsquo;ll notice we used a string (surrounded by quotes) and the computer responded by saying exactly what you told it to, &ldquo;2+2&rdquo;. The console also returns the word <code>undefined</code> this time. That&rsquo;s normal, it&rsquo;s the consoles strange way of saying that it worked correctly. It didn&rsquo;t say <code>undefined</code> the first time because I asked it to tell you, &ldquo;nice work&rdquo;. Now, remove the quotes and try again.</p>
+
+<pre><code>alert(2+2)
+</code></pre>
+
+<p>This time, the computer responds with, &ldquo;4&rdquo;. It recognized that you were using numbers and calculated the total instead of showing you the string.</p>
+
+<h2 id="console-output">Console Output</h2>
+
+<p>You can also use the console for your output instead of using an alert box. To do that you use the <code>console.log()</code> <em>method</em>. The word <em>Method</em> is computer jargon for a type of <em>command</em>. Give it a try with the following.</p>
+
+<pre><code>console.log(&quot;Hello Console&quot;);
+</code></pre>
+
+<p>This method is similar to the <code>alert</code> method but our output will only appear in the console. It&rsquo;s a bit faster than the alert dialog because we don&rsquo;t have to click <em>OK</em> every time.</p>
+
+<p>You may have noticed this line ended in a semi-colon. You don&rsquo;t need it but it&rsquo;s popular convention to end your lines with a semi-colon. Lets do that going forward.</p>
+
+<h2 id="variables">Variables</h2>
+
+<p>A variable is a piece of information that is remembered for us. Variables can store all of the data types we&rsquo;ve talked about so far (<em>strings</em>, <em>numbers</em>, and <em>booleans</em>). You create new variables with the <code>var</code> statement. Lets setup a variable to store our message from before. Type the following line.</p>
+
+<pre><code>var message = &quot;Hello World&quot;;
+</code></pre>
+
+<p>Now, you can output the message using the name you assigned it, <code>message</code>.</p>
+
+<pre><code>console.log(message);
+</code></pre>
+
+<p>This time you didn&rsquo;t use quotes and the console should have said, &ldquo;Hello World&rdquo;.</p>
+
+<p>Now try changing your message to something else and output it again.</p>
+
+<pre><code>message = &quot;Cool&quot;;
+console.log(message);
+</code></pre>
+
+<p>This time the output is, &ldquo;Cool&rdquo;. Notice we didn&rsquo;t use the <code>var</code> keyword. That&rsquo;s because you only use that statement to create new variables. This time we were changing the value stored in the <code>message</code> variable that had already been created above.</p>
+
+<p>We can assign as many variables as we need.</p>
+
+<h2 id="doing-math">Doing Math</h2>
+
+<p>You saw the result of <code>2+2</code> above. Your programs can do all kinds of calculations including addition, subtraction, multiplication and division. The characters you use for these calculations are listed below.</p>
+
+<table>
+<thead>
+<tr>
+<th>Char</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>Addition</td>
+</tr>
+
+<tr>
+<td><code>-</code></td>
+<td>Subtraction</td>
+</tr>
+
+<tr>
+<td><code>*</code></td>
+<td>Multiplication</td>
+</tr>
+
+<tr>
+<td><code>/</code></td>
+<td>Division</td>
+</tr>
+</tbody>
+</table>
+
+<p>Lets try a division problem. We&rsquo;ll divide <code>2.5</code> by <code>100</code>.</p>
+
+<pre><code>console.log(2.5 / 100);
+</code></pre>
+
+<p>If you typed it correctly, you should see <code>0.025</code> in the console.</p>
+
+<h2 id="prompting-for-information">Prompting for Information</h2>
+
+<p>You can also ask a user for information.</p>
+
+<pre><code>var name = prompt(&quot;What is your name?&quot;);
+alert(name);
+</code></pre>
+
+<p>The <code>prompt</code> command shows a dialog that has a field that you can type into. We set the <code>name</code> variable to whatever the user types into the dialog and then we output that information.</p>
+
+<h2 id="concatenation">Concatenation</h2>
+
+<p>You can use the plus <em>operator</em> to join two strings together. Try the following.</p>
+
+<pre><code>alert(&quot;Hello &quot; + name);
+</code></pre>
+
+<p>The string &ldquo;Hello &rdquo; and the variable <code>name</code> were joined together. Joining two strings together is called concatenation. The plus operator adds two numbers together or joins two strings together. Try all these variations to see what they do.</p>
+
+<pre><code>alert(2+4);
+alert(&quot;2+4&quot;);
+alert(&quot;2&quot; + &quot;4&quot;);
+alert(&quot;2&quot; + 4);
+alert(2 + &quot;4&quot;);
+</code></pre>
+
+<p>The last two are interesting. If any part of the argument contains a string, JavaScript will treat all of it as a string. Experiment with other variations on your own.</p>
+
+<h2 id="functions">Functions</h2>
+
+<p>You&rsquo;ve used the <code>alert()</code> and <code>console.log()</code> methods. You can also create your own functions that work the same way. <em>Function</em> is another word that describes a computer <em>command</em>. Lets write a function that calculates how much money you need to save every month in order to end up with $600 after 12 months.</p>
+
+<pre><code>function saveMonthly() {
+    var needed = 600;
+    var monthly = needed / 12;
+    return monthly;
+}
+</code></pre>
+
+<p>This function uses two variables; <code>needed</code> and <code>monthly</code>. Then it uses the <code>return</code> statement to return that information. Copy and paste the code into your console.</p>
+
+<p>The function won&rsquo;t do anything yet. We set it up so we could run it later. Lets run the function to see the amount we need to save.</p>
+
+<pre><code>saveMonthly();
+</code></pre>
+
+<p>Your function returns the monthly amount. You may notice that the console didn&rsquo;t say <code>undefined</code> this time. Each time you run a command in the console it shows you what that command returns. If a command doesn&rsquo;t have a return value defined, you&rsquo;ll see <code>undefined</code>. The consoles way of saying the command worked isn&rsquo;t so strange after all.</p>
+
+<h2 id="arguments">Arguments</h2>
+
+<p>We can also create arguments for our function. We want to pass the amount needed to the function and have it return the amount we need to save each month. Enter the following function into the console.</p>
+
+<pre><code>function saveMonthly(amount) {
+    var monthly = amount / 12;
+    return monthly;
+}
+</code></pre>
+
+<p>Now we call our function with the amount we need and it calculates the monthly amount we should save.</p>
+
+<pre><code>saveMonthly(600);
+</code></pre>
+
+<h2 id="accessing-the-page">Accessing the Page</h2>
+
+<p>So far, we&rsquo;ve done everything in JavaScript with an alert box or the console. You can also alter the web page you&rsquo;re viewing. Lets change the background color on this page.</p>
+
+<pre><code>var body = document.body.style;
+body = 'background-color: silver';
+</code></pre>
+
+<p>The entire web page that you&rsquo;re looking at should turn a light gray color.</p>
+
+<h2 id="continue-learning">Continue Learning</h2>
+
+<p>The goal of this page is to get your feet wet with computer programming. You&rsquo;ve just learned a valuable and marketable skill and I hope you&rsquo;re excited about it. Programming can be frustrating but it&rsquo;s also extremely rewarding.</p>
+
+  </div>
+
+  <div id=links>
+    
+      <a class="basic-alignment left" href="https://www.joeldare.com/blog/post/simple-instagram-like-bot/">&laquo; Simple Instagram Like Bot</a>
+    
+    
+  </div>
+</section>
+
+  
+</body>
+</html>
+
+
+
