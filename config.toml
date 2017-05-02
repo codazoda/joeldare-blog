@@ -4,6 +4,7 @@ title = "Joel Dare"
 author = "Joel Dare"
 theme = "hugo-joeldare-theme"
 publishDir = "docs"
+googleAnalytics = "UA-6888208-1"
 
 [params]
   sitename = "Joel Dare"
