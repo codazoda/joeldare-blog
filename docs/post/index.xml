@@ -32,5 +32,18 @@ Hello World It&amp;rsquo;s tradition to have your first program say hello to the
 Google Chrome Extension The easiest and safest tool to use is my Magis extension for Google Chrome. Gain new followers and likes on Instagram. Magis reminds you to be active and provides keyboard shortcuts to make liking and commenting fast. Set a goal to like and comment on 10 posts an hour to significantly increase your Instagram engagement with just two minutes of work.</description>
     </item>
     
+    <item>
+      <title>Using Awk on CSV Files</title>
+      <link>https://www.joeldare.com/blog/post/using-awk-on-csv-files/</link>
+      <pubDate>Tue, 28 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.joeldare.com/blog/post/using-awk-on-csv-files/</guid>
+      <description>You can use AWK to quickly look at a column of data in a CSV file.
+In my case, the CSV files are in the following format:
+&amp;quot;field1&amp;quot;,&amp;quot;field2&amp;quot;,&amp;quot;field3&amp;quot;  To view the 3rd field of every line, you can use the following command.
+awk -F &amp;quot;\&amp;quot;*,\&amp;quot;*&amp;quot; &#39;{print $3}&#39; file.csv  As another example, take the following pipe delimited format:
+field1|field2|field3  To view the 2nd field of every line, you can use the following command.</description>
+    </item>
+    
   </channel>
 </rss>

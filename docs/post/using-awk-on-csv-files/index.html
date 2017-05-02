@@ -19,10 +19,10 @@
     <title>
       
       
-         Simple Instagram Like Bot 
+         Using Awk on CSV Files 
       
     </title>
-    <link rel="canonical" href="https://www.joeldare.com/blog/post/simple-instagram-like-bot/">
+    <link rel="canonical" href="https://www.joeldare.com/blog/post/using-awk-on-csv-files/">
 
     <style>
   * {
@@ -392,174 +392,128 @@
 
 
 <section id=content>
-  <h1> Simple Instagram Like Bot </h1>
+  <h1> Using Awk on CSV Files </h1>
 
   <div id=sub-header>
-    Updated April 2017 · Created April 2016
+    Updated April 2017 · Created July 2015
   </div>
 
   <div class="entry-content">
     
 
-<p>This is a very simple Instagram like bot written in JavaScript.</p>
+<p>You can use AWK to quickly look at a column of data in a CSV file.</p>
 
-<h1 id="google-chrome-extension">Google Chrome Extension</h1>
+<p>In my case, the CSV files are in the following format:</p>
 
-<p>The easiest and safest tool to use is my <a href="https://chrome.google.com/webstore/detail/kahkfpeemmmjcbkffjmebbgkdmjglobi">Magis extension for Google Chrome</a>. Gain new followers and likes on Instagram. Magis reminds you to be active and provides keyboard shortcuts to make liking and commenting fast. Set a goal to like and comment on 10 posts an hour to significantly increase your Instagram engagement with just two minutes of work. Build brand awareness. Get more leads. Grow website traffic.</p>
-
-<p><a href="https://chrome.google.com/webstore/detail/kahkfpeemmmjcbkffjmebbgkdmjglobi">Magis extension for Google Chrome</a></p>
-
-<p>Magis tries not to break the spirit of Instagram, like the bot does, and the extension is updated frequently preventing problems when Instagram changes their web interface.</p>
-
-<h1 id="javascript-version">JavaScript Version</h1>
-
-<p>This script requires some extra work but it&rsquo;s free. Here are the steps to take to use the JavaScript version of my Instagram like bot.</p>
-
-<ul>
-<li>Highlight and copy the entire code block below</li>
-<li>Open your browser and visit intagram.com</li>
-<li>Enter a hash tag in the search box</li>
-<li>Open the first post under “Most Recent”</li>
-<li>Open the JavaScript console in your browser</li>
-<li>Paste this code into the console</li>
-</ul>
-
-<p>Here&rsquo;s the code. Because of frequent changes at Instagram this code is sometimes broken. Instagram is also cracking down on bot use like this and there is some risk to your Instagram account. Use this script at your own risk or see the Chrome extension listed above for a safer option.</p>
-
-<pre><code>function getHeartElement() {
-    var knownHeartElementNames = [&quot;coreSpriteHeartOpen&quot;, &quot;coreSpriteLikeHeartOpen&quot;];
-    var i = 0;
-    // Loop through the known heart elements until one works
-    for (i = 0; i &lt; knownHeartElementNames.length; i++) {
-        var heartElement = document.querySelector('.' + knownHeartElementNames[i]);
-        if (heartElement != undefined) {
-            break;
-        }
-    }
-    return heartElement;
-}
-
-function doLike() {
-    var likeElement = getHeartElement();
-    var nextElement = document.querySelector('.coreSpriteRightPaginationArrow');
-    likeCount++;
-    console.log('Liked ' + likeCount);
-    var nextTime = Math.random() * (14000 - 4000) + 4000;
-    likeElement.click();
-    setTimeout(function() {nextElement.click();}, 1000);
-    if (likeCount &lt; 25) {
-        setTimeout(doLike, nextTime);
-    } else {
-        console.log('Nice! Time for a break.');
-    }
-}
-
-var likeCount = 0;
-doLike();
+<pre><code>&quot;field1&quot;,&quot;field2&quot;,&quot;field3&quot;
 </code></pre>
 
-<h2 id="opening-the-console">Opening the Console</h2>
+<p>To view the 3rd field of every line, you can use the following command.</p>
 
-<p>The easiest way to open the javascript console is using the shortcut key combination. Here are the key combinations for several popular browsers.</p>
-
-<table>
-<thead>
-<tr>
-<th>Browser</th>
-<th>Keys</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>Google Chrome for Mac</td>
-<td>//command//, //option//, //J//</td>
-</tr>
-
-<tr>
-<td>Firefox for Mac</td>
-<td>//command//, //option//, //K//</td>
-</tr>
-
-<tr>
-<td>Safari for Mac</td>
-<td>//command//, //option//, //C//</td>
-</tr>
-
-<tr>
-<td>Google Chrome for Windows</td>
-<td>//control//, //shift//, //J//</td>
-</tr>
-
-<tr>
-<td>Firefox for Windows</td>
-<td>//control//, //shift//, //I//</td>
-</tr>
-
-<tr>
-<td>Google Chrome for Linux</td>
-<td>//control//, //shift//, //J//</td>
-</tr>
-
-<tr>
-<td>Firefox for Linux</td>
-<td>//control//, //shift//, //I//</td>
-</tr>
-</tbody>
-</table>
-
-<h1 id="legacy-version">Legacy Version</h1>
-
-<p>This is a very simple Instagram like bot written for the iMacros plugin. The plugin is available for IE, Chrome, and Firefox. This version is out of date and much more complicated than the JavaScript version above; use that instead.</p>
-
-<h2 id="getting-ready">Getting Ready</h2>
-
-<p>In order to run this bot you need to install the iMacros plugin for your browser platform. Here are the links for Chrome and Firefox (it&rsquo;s also available for IE but you&rsquo;ll have to search for that one yourself).</p>
-
-<p><a href="http://www.joeldare.com/wiki/lib/exe/fetch.php?tok=ae6c61&amp;media=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fimacros-for-chrome%2Fcplklnmnlbnpmjogncfgfijoopmnlemp">iMacros for Chrome</a><br />
-<a href="http://www.joeldare.com/wiki/lib/exe/fetch.php?tok=6ca271&amp;media=https%3A%2F%2Faddons.mozilla.org%2Fen-us%2Ffirefox%2Faddon%2Fimacros-for-firefox%2F)">iMacros for Firefox</a></p>
-
-<h2 id="running-the-bot">Running the Bot</h2>
-
-<p>In order to use the bot, do the following:</p>
-
-<ul>
-<li>Open Instagram in your browser</li>
-<li>Search for a specific tag you want</li>
-<li>Click on the first image</li>
-<li>Open the iMacros plugin in your browser</li>
-<li>Run the bot with the “Play Loop” option</li>
-</ul>
-
-<h2 id="the-macro-code">The Macro Code</h2>
-
-<p>iMacros scripts are stored in the browser as bookmarks, so you&rsquo;ll want to save the script before you can use it. To start a new script hit “Record” and then stop. Overwrite the macro with the code below then save it with a name like “Instagram Like Bot”.</p>
-
-<p>Here&rsquo;s the code for the bot itself.</p>
-
-<pre><code>SET !VAR1 EVAL(&quot;var randomNumber=Math.floor(Math.random()*5 + 3); randomNumber;&quot;)
-TAG POS=1 TYPE=A ATTR=TXT:Like
-TAG POS=1 TYPE=A ATTR=TXT:Next
-WAIT SECONDS={{!VAR1}}
+<pre><code>awk -F &quot;\&quot;*,\&quot;*&quot; '{print $3}' file.csv
 </code></pre>
 
-<h2 id="features">Features</h2>
+<p>As another example, take the following pipe delimited format:</p>
 
-<ul>
-<li>Very simple script</li>
-<li>Random pauses so it acts like a human</li>
-<li>You can watch it run</li>
-<li>You can run it in a background tab</li>
-</ul>
+<pre><code>field1|field2|field3
+</code></pre>
+
+<p>To view the 2nd field of every line, you can use the following command.</p>
+
+<pre><code>awk -F &quot;|&quot; '{print $2}' file.csv
+</code></pre>
+
+<p>You can also pull multiple columns with one command.  The following example pulls the 3rd column and then the 1st column.</p>
+
+<pre><code>awk -F &quot;\&quot;*,\&quot;*&quot; '{print $3,$1}' file.csv
+</code></pre>
+
+<p>If you separate the arguments with a comma (as in the example above) they will be concatenated with space between the items.  You can also use a space (as in the example below) and the items will have no space between them.</p>
+
+<pre><code>awk -F &quot;\&quot;*,\&quot;*&quot; '{print $3 $1}' file.csv
+</code></pre>
+
+<p>If you wanted to add a separator between those columns, you can add some text in quotes and it will be output as-is.  In the example below, I&rsquo;ll add a pipe (|) character between the two columns.</p>
+
+<pre><code>awk -F &quot;\&quot;*,\&quot;*&quot; '{print $3 &quot;|&quot; $1}' file.csv
+</code></pre>
+
+<h2 id="unmatched-error">Unmatched Error</h2>
+
+<p>If you get an error about an unmatched comma, you are probably trying to run this in a csh shell instead of a bash shell. These shells behave a little differently. Here&rsquo;s the error you&rsquo;ll get.</p>
+
+<pre><code>'Unmatched &quot;.'
+</code></pre>
+
+<p>One solution is to run this command from bash. To switch to a bash shell, just run the /bash/ command to switch to a bash shell.</p>
+
+<pre><code>bash
+</code></pre>
+
+<p>Special thanks to Marina for reporting this error.</p>
+
+<h2 id="in-an-awk-file">In an Awk File</h2>
+
+<p>You can also put your awk options inside of an awk script. Here&rsquo;s some example output for doing that.</p>
+
+<p>Here&rsquo;s my original file, test.csv.</p>
+
+<pre><code>a1,b1,c1
+a2,b2,c2
+a3,b3,c3
+</code></pre>
+
+<p>Here&rsquo;s my awk script, test.awk.</p>
+
+<pre><code>BEGIN {FS = &quot;,&quot;}
+{print $1,$3}
+</code></pre>
+
+<p>The &ldquo;BEGIN&rdquo; keyword tells awk to process this command before it processes the file.  FS is the field separator, we&rsquo;ve set it to a comma.</p>
+
+<p>Now I just run both through awk like this:</p>
+
+<pre><code>awk -f test.awk test.csv
+</code></pre>
+
+<p>Or like this (if you were using cat, which isn&rsquo;t necessary):</p>
+
+<pre><code>cat test.csv | awk -f test.awk
+</code></pre>
+
+<p>Here&rsquo;s the final result:</p>
+
+<pre><code>a1 c1
+a2 c2
+a3 c3
+</code></pre>
+
+<p>Here&rsquo;s an even bigger example awk script, but I won&rsquo;t explain this in detail.</p>
+
+<pre><code>BEGIN {
+  FS = &quot;,&quot;;
+}
+{
+  total = $2 + $3;
+  print $1,$2,$3,total;
+}
+END {
+
+}
+</code></pre>
+
+<h2 id="links">Links</h2>
+
+<p>[[<a href="http://www.staff.science.uu.nl/~oostr102/docs/nawk/nawk_toc.html|The">http://www.staff.science.uu.nl/~oostr102/docs/nawk/nawk_toc.html|The</a> Awk Manual]]</p>
+
+<p>[[<a href="http://www.thegeekstuff.com/2010/01/awk-tutorial-understand-awk-variables-with-3-practical-examples/|Awk">http://www.thegeekstuff.com/2010/01/awk-tutorial-understand-awk-variables-with-3-practical-examples/|Awk</a> Tutorial: Understand Awk Variables with 3 Practical Examples]]</p>
 
   </div>
 
   <div id=links>
     
-      <a class="basic-alignment left" href="https://www.joeldare.com/blog/post/using-awk-on-csv-files/">&laquo; Using Awk on CSV Files</a>
     
-    
-      <a class="basic-alignment left" href="https://www.joeldare.com/blog/post/how-to-code/">How to Code &raquo;</a>
+      <a class="basic-alignment left" href="https://www.joeldare.com/blog/post/simple-instagram-like-bot/">Simple Instagram Like Bot &raquo;</a>
     
   </div>
 </section>

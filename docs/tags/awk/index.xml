@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Awk on Joel Dare</title>
+    <link>https://www.joeldare.com/blog/tags/awk/</link>
+    <description>Recent content in Awk on Joel Dare</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 28 Jul 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.joeldare.com/blog/tags/awk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using Awk on CSV Files</title>
+      <link>https://www.joeldare.com/blog/post/using-awk-on-csv-files/</link>
+      <pubDate>Tue, 28 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.joeldare.com/blog/post/using-awk-on-csv-files/</guid>
+      <description>You can use AWK to quickly look at a column of data in a CSV file.
+In my case, the CSV files are in the following format:
+&amp;quot;field1&amp;quot;,&amp;quot;field2&amp;quot;,&amp;quot;field3&amp;quot;  To view the 3rd field of every line, you can use the following command.
+awk -F &amp;quot;\&amp;quot;*,\&amp;quot;*&amp;quot; &#39;{print $3}&#39; file.csv  As another example, take the following pipe delimited format:
+field1|field2|field3  To view the 2nd field of every line, you can use the following command.</description>
+    </item>
+    
+  </channel>
+</rss>
