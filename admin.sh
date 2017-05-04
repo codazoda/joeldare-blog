@@ -30,6 +30,7 @@ case $CHAR in
     ;;
   g)
     hugo
+    git status
     ;;
   p)
     echo Connecting to joeldare.com.
