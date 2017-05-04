@@ -41,6 +41,3 @@ case $CHAR in
     echo
     ;;
 esac
-
-# hugo serve
-# open http://localhost:1313/blog/
