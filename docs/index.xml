@@ -6,10 +6,19 @@
     <description>Recent content on Joel Dare</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Jun 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 May 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.joeldare.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How I Implemented Comments on a Static Site</title>
+      <link>https://www.joeldare.com/blog/post/comments-on-a-static-site/</link>
+      <pubDate>Thu, 04 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.joeldare.com/blog/post/comments-on-a-static-site/</guid>
+      <description>I&amp;rsquo;m using a static site generator for this blog and I was looking for a simple way to add comments without using a 3rd party tool like Disqus. I don&amp;rsquo;t want a 3rd party tracking my users and I don&amp;rsquo;t want to encumber my blog with any server backend. I want the site to be so simple that you could easily host it from your basement on a Raspberry Pi or otherwise very small computer.</description>
+    </item>
     
     <item>
       <title>How to Code</title>
