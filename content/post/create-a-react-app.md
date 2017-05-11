@@ -194,9 +194,9 @@ Each of these packages has a fairly long learning curve and each of them have th
 
 If you look into your `node_modules` directory you'll see that you have installed about 393 different packages. Here's a list of the number of packages that each of them installs.
 
-- babel (112)
-- webpack (285)
-- react (18)
+    - babel (112)
+    - webpack (285)
+    - react (18)
 
 Lucky for you these are only necessary for development and not for deployment. You'll be deploying just the `www` directory. That directory contains only the following 2 files.
 
