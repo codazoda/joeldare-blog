@@ -45,7 +45,7 @@ Add a `.babelrc` file and put the following into it
 
 Use yarn to install webpack and the babel-loader for webpack.
 
-    yarn add webpack babel-loader
+    yarn add webpack babel-loader --dev
 
 Create a `src/main.js` file that outputs `Hello World!`.
 
@@ -101,7 +101,7 @@ Now compile using the following command.
 
 Now we need to install react.
 
-    yarn add react react-dom
+    yarn add react react-dom --dev
 
 ## Make Pages
 
@@ -192,12 +192,22 @@ On the development machine you now have the following packages installed. Pretty
 
 Each of these packages has a fairly long learning curve and each of them have their own list of dependencies. I'm going to ignore npm and yarn for now, since I assumed you already had them. Babel and Webpack, however, install a LOT of stuff.
 
-If you look into your `node_modules` directory you'll see that you have installed 393 different packages. Lucky for you these are only necessary for development and not for deployment. You'll be deploying just the `www` directory. That directory contains only the following 2 files.
+If you look into your `node_modules` directory you'll see that you have installed about 393 different packages. Here's a list of the number of packages that each of them installs.
+
+- babel (112)
+- webpack (285)
+- react (18)
+
+Lucky for you these are only necessary for development and not for deployment. You'll be deploying just the `www` directory. That directory contains only the following 2 files.
 
     - package.js
     - index.html
 
 You'll notice, however, that your package.js file is something like 722K. Whoa! A `Hello World` react app is three quarters of a meg of JS code. Imagine sending that to a bunch of mobile devices with crappy connections. Sure it'll be gzipped, but still, this is large.
+
+The package.js is not minified yet. You'll probably want to change that in your webpack settings.
+
+You might also be able to bring in react in a more efficient way. At least then, users who have already visited a react based might will have cashed it.
 
 There are smaller alternatives, such as preact, and I may explore those in the future.
 
