@@ -197,7 +197,7 @@ If you look into your `node_modules` directory you'll see that you have installe
     - package.js
     - index.html
 
-You'll notice, however, that your package.js file is something like 722K. Whoa! A `Hello World` react app is the quarters of a meg of JS code. Imagine sending that to a bunch of mobile devices with crappy connections.
+You'll notice, however, that your package.js file is something like 722K. Whoa! A `Hello World` react app is three quarters of a meg of JS code. Imagine sending that to a bunch of mobile devices with crappy connections. Sure it'll be gzipped, but still, this is large.
 
 There are smaller alternatives, such as preact, and I may explore those in the future.
 

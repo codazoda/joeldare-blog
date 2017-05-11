@@ -603,7 +603,7 @@ export default Counter;
 - react
 </code></pre>
 
-<p>Each of these packages has it&rsquo;s own list of dependencies. I&rsquo;m going to ignore npm and yarn for now, since I assumed you already had them. Babel, however, installs a LOT of stuff.</p>
+<p>Each of these packages has a fairly long learning curve and each of them have their own list of dependencies. I&rsquo;m going to ignore npm and yarn for now, since I assumed you already had them. Babel and Webpack, however, install a LOT of stuff.</p>
 
 <p>If you look into your <code>node_modules</code> directory you&rsquo;ll see that you have installed 393 different packages. Lucky for you these are only necessary for development and not for deployment. You&rsquo;ll be deploying just the <code>www</code> directory. That directory contains only the following 2 files.</p>
 
@@ -611,7 +611,7 @@ export default Counter;
 - index.html
 </code></pre>
 
-<p>You&rsquo;ll notice, however, that your package.js file is something like 722K. Whoa! A <code>Hello World</code> react app is the quarters of a meg of JS code. Imagine sending that to a bunch of mobile devices with crappy connections.</p>
+<p>You&rsquo;ll notice, however, that your package.js file is something like 722K. Whoa! A <code>Hello World</code> react app is three quarters of a meg of JS code. Imagine sending that to a bunch of mobile devices with crappy connections. Sure it&rsquo;ll be gzipped, but still, this is large.</p>
 
 <p>There are smaller alternatives, such as preact, and I may explore those in the future.</p>
 
