@@ -203,5 +203,5 @@ There are smaller alternatives, such as preact, and I may explore those in the f
 
 ## Links
 
-[React](https://facebook.github.io/react/)
+[React](https://facebook.github.io/react/)  
 [Build Your Own Starter](http://andrewhfarmer.com/build-your-own-starter/#0-intro)
