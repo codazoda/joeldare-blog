@@ -6,10 +6,20 @@
     <description>Recent content on Joel Dare</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 May 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.joeldare.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Create a React App from Scratch</title>
+      <link>https://www.joeldare.com/blog/post/create-a-react-app/</link>
+      <pubDate>Thu, 11 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.joeldare.com/blog/post/create-a-react-app/</guid>
+      <description>A basic react application needs npm, yarn, babel, and webpack. This is a step by step guide to installing these things and setting up a minimal initial react project.
+I&amp;rsquo;ll assume you have npm and yarn already installed. Go install those if you don&amp;rsquo;t regularly use them. You can substitute npm commands for the yarn commands below, if you like. yarn add &amp;lt;package&amp;gt; becomes npm install --save &amp;lt;package&amp;gt;. yarn add &amp;lt;package&amp;gt; --dev becomes npm install --save-dev &amp;lt;package&amp;gt;.</description>
+    </item>
     
     <item>
       <title>How I Implemented Comments on a Static Site</title>

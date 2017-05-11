@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <base href="https://www.joeldare.com/blog">
+    
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400|Old+Standard+TT:400' rel='stylesheet' type='text/css'>
+
+    <link rel="icon" type="image/png" href="/favicon_16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon_32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon_128x128.png" sizes="128x128">
+
+    <title>
+      
+      
+         Create a React App from Scratch 
+      
+    </title>
+    <link rel="canonical" href="https://www.joeldare.com/blog/post/create-a-react-app/">
+
+    <style>
+  * {
+    border:0;
+    font:inherit;
+    font-size:100%;
+    vertical-align:baseline;
+    margin:0;
+    padding:0;
+    color: black;
+  }
+
+  body {
+    font-family:'Open Sans', 'Myriad Pro', Myriad, sans-serif;
+    font-size:17px;
+    line-height:160%;
+    color:#1d1313;
+    max-width:700px;
+    margin:auto;
+  }
+
+  p {
+    margin: 20px 0;
+  }
+
+  a img {
+    border:none;
+  }
+
+  img {
+    margin: 10px auto 10px auto;
+    max-width: 100%;
+    display: block;
+  }
+
+  pre, code {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    background-color: #f7f7f7;
+  }
+
+  code {
+    font-size: 12px;
+    padding: 4px;
+  }
+
+  pre {
+    margin-top: 0;
+    margin-bottom: 16px;
+    word-wrap: normal;
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+  }
+
+  pre>code {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    word-break: normal;
+    white-space: pre;
+    background: transparent;
+    border: 0;
+  }
+
+  pre code {
+    display: inline;
+    max-width: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0;
+  }
+
+  pre code::before,
+  pre code::after {
+    content: normal;
+  }
+
+  em,q,em,dfn {
+    font-style:italic;
+  }
+
+  .sans,html .gist .gist-file .gist-meta {
+    font-family:"Open Sans","Myriad Pro",Myriad,sans-serif;
+  }
+
+  .mono,pre,code,tt,p code,li code {
+    font-family:Menlo,Monaco,"Andale Mono","lucida console","Courier New",monospace;
+  }
+
+  strong {
+    font-weight:600;
+  }
+
+  q:before {
+    content:"\201C";
+  }
+
+  q:after {
+    content:"\201D";
+  }
+
+  del,s {
+    text-decoration:line-through;
+  }
+
+  blockquote {
+    font-family:"Old Standard TT",serif;
+    text-align:center;
+    padding:50px;
+  }
+
+  blockquote p {
+    display:inline-block;
+    font-style:italic;
+  }
+
+  blockquote:before,blockquote:after {
+    font-family:"Old Standard TT",serif;
+    content:'\201C';
+    font-size:35px;
+    color:#403c3b;
+  }
+
+  blockquote:after {
+    content:'\201D';
+  }
+
+  hr {
+    width:40%;
+    height: 1px;
+    background:#403c3b;
+    margin: 25px auto;
+  }
+
+  h1 {
+    font-size:35px;
+  }
+
+  h2 {
+    font-size:28px;
+  }
+
+  h3 {
+    font-size:22px;
+    margin-top:18px;
+  }
+
+  h1 a,h2 a,h3 a {
+    text-decoration:none;
+  }
+
+  h1,h2 {
+    margin-top:28px;
+  }
+
+  #sub-header, time {
+    color:#403c3b;
+    font-size:13px;
+  }
+
+  #sub-header {
+    margin: 0 4px;
+  }
+
+  #nav h1 a {
+    font-size:35px;
+    color:#1d1313;
+    line-height:120%;
+  }
+
+  .posts_listing a,#nav a {
+    text-decoration: none;
+  }
+
+  li {
+    margin-left: 20px;
+  }
+
+  ul li {
+    margin-left: 5px;
+  }
+
+  ul li {
+    list-style-type: none;
+  }
+  ul li:before {
+    content:"\00BB \0020";
+  }
+
+  #nav ul li:before, .posts_listing li:before {
+    content:'';
+    margin-right:0;
+  }
+
+  #content {
+    text-align:left;
+    width:100%;
+    font-size:15px;
+    padding:60px 0 80px;
+  }
+
+  #content h1,#content h2 {
+    margin-bottom:5px;
+  }
+
+  #content h2 {
+    font-size:25px;
+  }
+
+  #content .entry-content {
+    margin-top:15px;
+  }
+
+  #content time {
+    margin-left:3px;
+  }
+
+  #content h1 {
+    font-size:30px;
+  }
+
+  .highlight {
+    margin: 10px 0;
+  }
+
+  .posts_listing {
+    margin:0 0 50px;
+  }
+
+  .posts_listing li {
+    margin:0 0 25px 15px;
+  }
+
+  .posts_listing li a:hover,#nav a:hover {
+    text-decoration: underline;
+  }
+
+  #nav {
+    text-align:center;
+    position:static;
+    margin-top:60px;
+  }
+
+  #nav ul {
+    display: table;
+    margin: 8px auto 0 auto;
+  }
+
+  #nav li {
+    list-style-type:none;
+    display:table-cell;
+    font-size:15px;
+    padding: 0 20px;
+  }
+
+  #links {
+    margin: 50px 0 0 0;
+  }
+
+  #links :nth-child(2) {
+    float:right;
+  }
+
+  #not-found {
+    text-align: center;
+  }
+
+  #not-found a {
+    font-family:"Old Standard TT",serif;
+    font-size: 200px;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 225px;
+  }
+
+  @media (max-width: 750px) {
+    body {
+      padding-left:20px;
+      padding-right:20px;
+    }
+
+    #nav h1 a {
+      font-size:28px;
+    }
+
+    #nav li {
+      font-size:13px;
+      padding: 0 15px;
+    }
+
+    #content {
+      margin-top:0;
+      padding-top:50px;
+      font-size:14px;
+    }
+
+    #content h1 {
+      font-size:25px;
+    }
+
+    #content h2 {
+      font-size:22px;
+    }
+
+    .posts_listing li div {
+      font-size:12px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    body {
+      padding-left:20px;
+      padding-right:20px;
+    }
+
+    #nav h1 a {
+      font-size:22px;
+    }
+
+    #nav li {
+      font-size:12px;
+      padding: 0 10px;
+    }
+
+    #content {
+      margin-top:0;
+      padding-top:20px;
+      font-size:12px;
+    }
+
+    #content h1 {
+      font-size:20px;
+    }
+
+    #content h2 {
+      font-size:18px;
+    }
+
+    .posts_listing li div{
+      font-size:12px;
+    }
+  }
+</style>
+
+
+    
+  </head>
+
+  <body>
+    <section id=nav>
+      <h1><a href="">Joel Dare</a></h1>
+      <ul>
+        
+          <li><a href="mailto:joel@joeldare.com">Email</a></li>
+        
+          <li><a href="https://github.com/codazoda">Github</a></li>
+        
+          <li><a href="https://www.joeldare.com/wiki">Wiki</a></li>
+        
+      </ul>
+    </section>
+
+
+<section id=content>
+  <h1> Create a React App from Scratch </h1>
+
+  <div id=sub-header>
+    Created May 2017
+  </div>
+
+  <div class="entry-content">
+    
+
+<p>A basic react application needs npm, yarn, babel, and webpack. This is a step by step guide to installing these things and setting up a minimal initial react project.</p>
+
+<p>I&rsquo;ll assume you have npm and yarn already installed. Go install those if you don&rsquo;t regularly use them. You can substitute npm commands for the yarn commands below, if you like. <code>yarn add &lt;package&gt;</code> becomes <code>npm install --save &lt;package&gt;</code>. <code>yarn add &lt;package&gt; --dev</code> becomes <code>npm install --save-dev &lt;package&gt;</code>. But, I use yarn so my instructions are tailored to it.</p>
+
+<h2 id="setup-directory">Setup Directory</h2>
+
+<p>Create a directory.</p>
+
+<pre><code>mkdir react-minimal
+</code></pre>
+
+<p><code>cd</code> into the directory you created.</p>
+
+<h2 id="yarn">Yarn</h2>
+
+<p>Initialize this directory as a project using <code>yarn</code>.</p>
+
+<pre><code>yarn init
+</code></pre>
+
+<p>Add <code>.gitignore</code> with the following.</p>
+
+<pre><code>node_modules
+</code></pre>
+
+<h2 id="babel">Babel</h2>
+
+<p>Use <code>yarn</code> to install <code>babel</code> with the following.</p>
+
+<pre><code>yarn add babel-core babel-preset-latest babel-preset-react --dev
+</code></pre>
+
+<p>Add a <code>.babelrc</code> file and put the following into it</p>
+
+<pre><code>{
+  &quot;presets&quot;: [
+    [&quot;latest&quot;, { &quot;modules&quot;: false }],
+    &quot;react&quot;
+  ]
+}
+</code></pre>
+
+<h2 id="webpack">Webpack</h2>
+
+<p>Use yarn to install webpack and the babel-loader for webpack.</p>
+
+<pre><code>yarn add webpack babel-loader
+</code></pre>
+
+<p>Create a <code>src/main.js</code> file that outputs <code>Hello World!</code>.</p>
+
+<pre><code>console.log('Hello World!');
+</code></pre>
+
+<p>Create a <code>webpack.config.js</code> file with the following in it.</p>
+
+<pre><code>const path = require('path');
+module.exports = {
+  context: path.join(__dirname, 'src'),
+  entry: [
+    './main.js',
+  ],
+  output: {
+    path: path.join(__dirname, 'www'),
+    filename: 'bundle.js',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [
+          'babel-loader',
+        ],
+      },
+    ],
+  },
+  resolve: {
+    modules: [
+      path.join(__dirname, 'node_modules'),
+    ],
+  },
+};
+</code></pre>
+
+<h2 id="compile">Compile</h2>
+
+<p>Open the <code>.gitignore</code> and add the following section.</p>
+
+<pre><code>www/bundle.js
+</code></pre>
+
+<p>Open the package.json file and add the following section.</p>
+
+<pre><code>&quot;scripts&quot;: {
+  &quot;build&quot;: &quot;webpack&quot;
+}
+</code></pre>
+
+<p>Now compile using the following command.</p>
+
+<pre><code>yarn run build
+</code></pre>
+
+<h2 id="react">React</h2>
+
+<p>Now we need to install react.</p>
+
+<pre><code>yarn add react react-dom
+</code></pre>
+
+<h2 id="make-pages">Make Pages</h2>
+
+<p>Create a <code>www/index.html</code> with the following content.</p>
+
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+  &lt;script src=&quot;/bundle.js&quot; &gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  Hello World
+  &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Update <code>src/main.js</code> to the following.</p>
+
+<pre><code>console.log('Hello World!');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Counter from './Counter';
+
+document.addEventListener('DOMContentLoaded', function() {
+  ReactDOM.render(
+    React.createElement(Counter),
+    document.getElementById('mount')
+  );
+});
+</code></pre>
+
+<p>Create a <code>src/Counter.js</code> file with the following contents.</p>
+
+<pre><code>import React from 'react';
+/**
+ * A counter button: tap the button to increase the count.
+ */
+class Counter extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      count: 0,
+    };
+  }
+  render() {
+    return (
+      &lt;button
+        onClick={() =&gt; {
+          this.setState({ count: this.state.count + 1 });
+        }}
+      &gt;
+        Count: {this.state.count}
+      &lt;/button&gt;
+    );
+  }
+}
+export default Counter;
+</code></pre>
+
+<p>Create a <code>.babelrc</code> file with the following.</p>
+
+<pre><code>{
+  &quot;plugins&quot;: [&quot;transform-react-jsx&quot;]
+}
+</code></pre>
+
+<h2 id="serve-the-files">Serve the Files</h2>
+
+<p>You&rsquo;ve now created your react app and you&rsquo;re ready to serve the <code>www</code> folder. You can upload it to a web host or run some type of server locally. I do a lot of PHP development and it&rsquo;s server is convenient for local testing so I switch to the <code>www</code> directory and then start the server with the following command.</p>
+
+<pre><code>php -S localhost:8080
+</code></pre>
+
+<h2 id="github">Github</h2>
+
+<p>This completed react project is available in my <a href="https://github.com/codazoda/react-minimal">repo on github</a>. You can clone it from there if you want to look over the source or if you have any trouble with these instructions.</p>
+
+<h2 id="react-thoughts">React Thoughts</h2>
+
+<p>I&rsquo;ve been using react for about two years. As an old-school software developer I&rsquo;ve found it difficult to reason about although most developers say that is exactly why you should use react.</p>
+
+<p>This setup process is pretty complex. I&rsquo;d be hesitant to use react for any small projects. It took me well over an hour to setup this minimal framework, although I was also documenting it in this blog post as I did the setup.</p>
+
+<p>On the development machine you now have the following packages installed. Pretty much all of them are necessary to work in react. That&rsquo;s not technically true, you can use react without this stuff, but no one works that way. So, here&rsquo;s the list of software you&rsquo;ve installed to make all this happen.</p>
+
+<pre><code>- npm
+- yarn
+- babel
+- webpack
+- react
+</code></pre>
+
+<p>Each of these packages has it&rsquo;s own list of dependencies. I&rsquo;m going to ignore npm and yarn for now, since I assumed you already had them. Babel, however, installs a LOT of stuff.</p>
+
+<p>If you look into your <code>node_modules</code> directory you&rsquo;ll see that you have installed 393 different packages. Lucky for you these are only necessary for development and not for deployment. You&rsquo;ll be deploying just the <code>www</code> directory. That directory contains only the following 2 files.</p>
+
+<pre><code>- package.js
+- index.html
+</code></pre>
+
+<p>You&rsquo;ll notice, however, that your package.js file is something like 722K. Whoa! A <code>Hello World</code> react app is the quarters of a meg of JS code. Imagine sending that to a bunch of mobile devices with crappy connections.</p>
+
+<p>There are smaller alternatives, such as preact, and I may explore those in the future.</p>
+
+<h2 id="links">Links</h2>
+
+<p><a href="https://facebook.github.io/react/">React</a>
+<a href="http://andrewhfarmer.com/build-your-own-starter/#0-intro">Build Your Own Starter</a></p>
+
+  </div>
+
+
+<div>
+    <h2 style="margin-top: 50px;">Comments</h2>
+
+    <ul style="margin-top: 20px;">
+        
+            <li>There are no comments yet.</li>
+        
+    </ul>
+    <p><a href="mailto:joel@joeldare.com?subject=Comment - Create%20a%20React%20App%20from%20Scratch&body=Name: %0D%0A%0D%0AComment: %0D%0A" target="_top">Add Comment</a></p>
+</div>
+
+
+  <div id=links>
+    
+      <a class="basic-alignment left" href="https://www.joeldare.com/blog/post/comments-on-a-static-site/">&laquo; How I Implemented Comments on a Static Site</a>
+    
+    
+  </div>
+</section>
+
+  
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-6888208-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>
+
