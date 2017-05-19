@@ -13,6 +13,7 @@ echo [T] Test in Browser
 echo [G] Generate Site
 echo [P] Pull on Server
 echo [Q] Quit
+echo [D] Deploy with Add and Commit
 echo
 printf "> "
 
@@ -36,6 +37,12 @@ case $CHAR in
     echo Connecting to joeldare.com.
     ssh root@joeldare.com "cd /var/www/joeldare-blog;git pull"
     ;;
+  d)
+    echo Adding, committing, and deploying to joeldare.com.
+    add .
+    commit -m 'add/edit a post'
+    hugo
+    ssh root@joeldare.com "cd /var/www/joeldare-blog;git pull"
   q)
     echo Then why even start?
     echo
