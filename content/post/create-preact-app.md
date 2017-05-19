@@ -4,7 +4,7 @@ title: "Create a Preact App from Scratch"
 tags: ["tech","react", "preact"]
 ---
 
-I wrote these instructions after having written my previous instructions [Create a React App from Scratch](post/create-a-react-app). The process is almost identical. The result is a much smaller app.
+I wrote these instructions after having written my previous instructions [Create a React App from Scratch](blog/post/create-a-react-app). The process is almost identical. The result is a much smaller app.
 
 A basic preact application needs npm, yarn, babel, and webpack. This is a step by step guide to installing these things and setting up a minimal initial preact project.
 
