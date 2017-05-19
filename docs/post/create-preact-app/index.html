@@ -490,7 +490,7 @@ module.exports = {
 
 <h2 id="compile">Compile</h2>
 
-<p>Open the <code>.gitignore</code> and add the following section.</p>
+<p>Open the <code>.gitignore</code> and add the following line.</p>
 
 <pre><code>www/bundle.js
 </code></pre>
@@ -574,9 +574,10 @@ export default Counter;
 
 <p>Create a <code>.babelrc</code> file with the following.</p>
 
-<p>&ldquo;plugins&rdquo;: [
-    [&ldquo;transform-react-jsx&rdquo;, { &ldquo;pragma&rdquo;:&ldquo;preact.h&rdquo; }]
-  ]</p>
+<pre><code>&quot;plugins&quot;: [
+  [&quot;transform-react-jsx&quot;, { &quot;pragma&quot;:&quot;preact.h&quot; }]
+]
+</code></pre>
 
 <h2 id="serve-the-files">Serve the Files</h2>
 
@@ -587,13 +588,11 @@ export default Counter;
 
 <h2 id="github">Github</h2>
 
-<p>This completed preact project is available in my <a href="https://github.com/codazoda/react-minimal">repo on github</a>. You can clone it from there if you want to look over the source or if you have any trouble with these instructions.</p>
+<p>This completed preact project is available in my <a href="https://github.com/codazoda/preact-minimal">repo on github</a>. You can clone it from there if you want to look over the source or if you have any trouble with these instructions.</p>
 
 <h2 id="preact-thoughts">Preact Thoughts</h2>
 
-<p>I&rsquo;ve been using preact for about two years. As an old-school software developer I&rsquo;ve found it difficult to reason about although most developers say that is exactly why you should use preact.</p>
-
-<p>This setup process is pretty complex. I&rsquo;d be hesitant to use preact for any small projects. It took me well over an hour to setup this minimal framework, although I was also documenting it in this blog post as I did the setup.</p>
+<p>I talked a little about the bloat of react in my post mentioned above. Preact is much, much smaller. Some of the same caveats still apply though.</p>
 
 <p>On the development machine you now have the following packages installed. Pretty much all of them are necessary to work in preact. That&rsquo;s not technically true, you can use preact without this stuff, but no one works that way. So, here&rsquo;s the list of software you&rsquo;ve installed to make all this happen.</p>
 
@@ -610,7 +609,7 @@ export default Counter;
 
 <pre><code>- babel (112)
 - webpack (285)
-- preact (?)
+- preact (2)
 </code></pre>
 
 <p>Lucky for you these are only necessary for development and not for deployment. You&rsquo;ll be deploying just the <code>www</code> directory. That directory contains only the following 2 files.</p>
@@ -619,11 +618,11 @@ export default Counter;
 - index.html
 </code></pre>
 
-<p>In react the transpiled package.js file was 722K. Using preact, it&rsquo;s just 136B! Yes, that&rsquo;s bytes, not kilobytes. And that&rsquo;s without the package.js file minified yet.</p>
+<p>In react the transpiled package.js file was 722K. Using preact, it&rsquo;s just 136B! Yes, that&rsquo;s bytes, not kilobytes. And that&rsquo;s without the package.js file minified yet (in both cases).</p>
 
 <h2 id="links">Links</h2>
 
-<p>[Preact]()
+<p><a href="https://preactjs.com/">Preact</a>
 <a href="http://andrewhfarmer.com/build-your-own-starter/#0-intro">Build Your Own Starter</a></p>
 
   </div>

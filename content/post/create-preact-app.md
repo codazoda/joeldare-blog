@@ -85,7 +85,7 @@ Create a `webpack.config.js` file with the following in it.
 
 ## Compile
 
-Open the `.gitignore` and add the following section.
+Open the `.gitignore` and add the following line.
 
     www/bundle.js
 
@@ -164,9 +164,11 @@ export default Counter;
 
 Create a `.babelrc` file with the following.
 
-  "plugins": [
-    ["transform-react-jsx", { "pragma":"preact.h" }]
-  ]
+```
+"plugins": [
+  ["transform-react-jsx", { "pragma":"preact.h" }]
+]
+```
 
 ## Serve the Files
 
@@ -176,13 +178,11 @@ You've now created your preact app and you're ready to serve the `www` folder. Y
 
 ## Github
 
-This completed preact project is available in my [repo on github](https://github.com/codazoda/react-minimal). You can clone it from there if you want to look over the source or if you have any trouble with these instructions.
+This completed preact project is available in my [repo on github](https://github.com/codazoda/preact-minimal). You can clone it from there if you want to look over the source or if you have any trouble with these instructions.
 
 ## Preact Thoughts
 
-I've been using preact for about two years. As an old-school software developer I've found it difficult to reason about although most developers say that is exactly why you should use preact.
-
-This setup process is pretty complex. I'd be hesitant to use preact for any small projects. It took me well over an hour to setup this minimal framework, although I was also documenting it in this blog post as I did the setup.
+I talked a little about the bloat of react in my post mentioned above. Preact is much, much smaller. Some of the same caveats still apply though.
 
 On the development machine you now have the following packages installed. Pretty much all of them are necessary to work in preact. That's not technically true, you can use preact without this stuff, but no one works that way. So, here's the list of software you've installed to make all this happen.
 
@@ -198,18 +198,16 @@ If you look into your `node_modules` directory you'll see that you have installe
 
     - babel (112)
     - webpack (285)
-    - preact (?)
+    - preact (2)
 
 Lucky for you these are only necessary for development and not for deployment. You'll be deploying just the `www` directory. That directory contains only the following 2 files.
 
     - package.js
     - index.html
 
-In react the transpiled package.js file was 722K. Using preact, it's just 136B! Yes, that's bytes, not kilobytes. And that's without the package.js file minified yet.
-
-
+In react the transpiled package.js file was 722K. Using preact, it's just 136B! Yes, that's bytes, not kilobytes. And that's without the package.js file minified yet (in both cases).
 
 ## Links
 
-[Preact]() 
+[Preact](https://preactjs.com/) 
 [Build Your Own Starter](http://andrewhfarmer.com/build-your-own-starter/#0-intro)
