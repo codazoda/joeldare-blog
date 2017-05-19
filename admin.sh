@@ -42,6 +42,7 @@ case $CHAR in
     hugo
     git add .
     git commit -m 'add/edit a post and regenerate'
+    git push
     ssh root@joeldare.com "cd /var/www/joeldare-blog;git pull"
     ;;
   q)
