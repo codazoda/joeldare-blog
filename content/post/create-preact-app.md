@@ -209,5 +209,5 @@ In react the transpiled package.js file was 722K. Using preact, it's just 136B! 
 
 ## Links
 
-[Preact](https://preactjs.com/) 
+[Preact](https://preactjs.com/)   
 [Build Your Own Starter](http://andrewhfarmer.com/build-your-own-starter/#0-intro)
