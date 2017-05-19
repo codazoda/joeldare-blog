@@ -6,10 +6,21 @@
     <description>Recent content in Tech on Joel Dare</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 May 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.joeldare.com/blog/tags/tech/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Create a Preact App from Scratch</title>
+      <link>https://www.joeldare.com/blog/post/create-preact-app/</link>
+      <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.joeldare.com/blog/post/create-preact-app/</guid>
+      <description>I wrote these instructions after having written my previous instructions [Create a React App from Scratch]. The process is almost identical. The result is a much smaller app.
+A basic preact application needs npm, yarn, babel, and webpack. This is a step by step guide to installing these things and setting up a minimal initial preact project.
+I&amp;rsquo;ll assume you have npm and yarn already installed. Go install those if you don&amp;rsquo;t regularly use them.</description>
+    </item>
     
     <item>
       <title>Create a React App from Scratch</title>

@@ -40,8 +40,8 @@ case $CHAR in
   d)
     echo Adding, committing, and deploying to joeldare.com.
     hugo
-    add .
-    commit -m 'add/edit a post and regenerate'
+    git add .
+    git commit -m 'add/edit a post and regenerate'
     ssh root@joeldare.com "cd /var/www/joeldare-blog;git pull"
     ;;
   q)

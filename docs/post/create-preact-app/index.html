@@ -19,10 +19,10 @@
     <title>
       
       
-         Create a React App from Scratch 
+         Create a Preact App from Scratch 
       
     </title>
-    <link rel="canonical" href="https://www.joeldare.com/blog/post/create-a-react-app/">
+    <link rel="canonical" href="https://www.joeldare.com/blog/post/create-preact-app/">
 
     <style>
   * {
@@ -392,7 +392,7 @@
 
 
 <section id=content>
-  <h1> Create a React App from Scratch </h1>
+  <h1> Create a Preact App from Scratch </h1>
 
   <div id=sub-header>
     Created May 2017
@@ -401,7 +401,9 @@
   <div class="entry-content">
     
 
-<p>A basic react application needs npm, yarn, babel, and webpack. This is a step by step guide to installing these things and setting up a minimal initial react project.</p>
+<p>I wrote these instructions after having written my previous instructions [Create a React App from Scratch]. The process is almost identical. The result is a much smaller app.</p>
+
+<p>A basic preact application needs npm, yarn, babel, and webpack. This is a step by step guide to installing these things and setting up a minimal initial preact project.</p>
 
 <p>I&rsquo;ll assume you have npm and yarn already installed. Go install those if you don&rsquo;t regularly use them. You can substitute npm commands for the yarn commands below, if you like. <code>yarn add &lt;package&gt;</code> becomes <code>npm install --save &lt;package&gt;</code>. <code>yarn add &lt;package&gt; --dev</code> becomes <code>npm install --save-dev &lt;package&gt;</code>. But, I use yarn so my instructions are tailored to it.</p>
 
@@ -409,7 +411,7 @@
 
 <p>Create a directory.</p>
 
-<pre><code>mkdir react-minimal
+<pre><code>mkdir preact-minimal
 </code></pre>
 
 <p><code>cd</code> into the directory you created.</p>
@@ -430,7 +432,7 @@
 
 <p>Use <code>yarn</code> to install <code>babel</code> with the following.</p>
 
-<pre><code>yarn add babel-core babel-preset-latest babel-preset-react --dev
+<pre><code>yarn add babel-core babel-preset-latest babel-preset-preact --dev
 </code></pre>
 
 <p>Add a <code>.babelrc</code> file and put the following into it</p>
@@ -438,7 +440,7 @@
 <pre><code>{
   &quot;presets&quot;: [
     [&quot;latest&quot;, { &quot;modules&quot;: false }],
-    &quot;react&quot;
+    &quot;preact&quot;
   ]
 }
 </code></pre>
@@ -505,11 +507,11 @@ module.exports = {
 <pre><code>yarn run build
 </code></pre>
 
-<h2 id="react">React</h2>
+<h2 id="preact">Preact</h2>
 
-<p>Now we need to install react.</p>
+<p>Now we need to install preact.</p>
 
-<pre><code>yarn add react react-dom --dev
+<pre><code>yarn add preact preact-dom --dev
 </code></pre>
 
 <h2 id="make-pages">Make Pages</h2>
@@ -530,13 +532,13 @@ module.exports = {
 <p>Update <code>src/main.js</code> to the following.</p>
 
 <pre><code>console.log('Hello World!');
-import React from 'react';
-import ReactDOM from 'react-dom';
+import Preact from 'preact';
+import PreactDOM from 'preact-dom';
 import Counter from './Counter';
 
 document.addEventListener('DOMContentLoaded', function() {
-  ReactDOM.render(
-    React.createElement(Counter),
+  PreactDOM.render(
+    Preact.createElement(Counter),
     document.getElementById('mount')
   );
 });
@@ -544,11 +546,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <p>Create a <code>src/Counter.js</code> file with the following contents.</p>
 
-<pre><code>import React from 'react';
+<pre><code>import Preact from 'preact';
 /**
  * A counter button: tap the button to increase the count.
  */
-class Counter extends React.Component {
+class Counter extends Preact.Component {
   constructor() {
     super();
     this.state = {
@@ -572,35 +574,34 @@ export default Counter;
 
 <p>Create a <code>.babelrc</code> file with the following.</p>
 
-<pre><code>{
-  &quot;plugins&quot;: [&quot;transform-react-jsx&quot;]
-}
-</code></pre>
+<p>&ldquo;plugins&rdquo;: [
+    [&ldquo;transform-react-jsx&rdquo;, { &ldquo;pragma&rdquo;:&ldquo;preact.h&rdquo; }]
+  ]</p>
 
 <h2 id="serve-the-files">Serve the Files</h2>
 
-<p>You&rsquo;ve now created your react app and you&rsquo;re ready to serve the <code>www</code> folder. You can upload it to a web host or run some type of server locally. I do a lot of PHP development and it&rsquo;s server is convenient for local testing so I switch to the <code>www</code> directory and then start the server with the following command.</p>
+<p>You&rsquo;ve now created your preact app and you&rsquo;re ready to serve the <code>www</code> folder. You can upload it to a web host or run some type of server locally. I do a lot of PHP development and it&rsquo;s server is convenient for local testing so I switch to the <code>www</code> directory and then start the server with the following command.</p>
 
 <pre><code>php -S localhost:8080
 </code></pre>
 
 <h2 id="github">Github</h2>
 
-<p>This completed react project is available in my <a href="https://github.com/codazoda/react-minimal">repo on github</a>. You can clone it from there if you want to look over the source or if you have any trouble with these instructions.</p>
+<p>This completed preact project is available in my <a href="https://github.com/codazoda/react-minimal">repo on github</a>. You can clone it from there if you want to look over the source or if you have any trouble with these instructions.</p>
 
-<h2 id="react-thoughts">React Thoughts</h2>
+<h2 id="preact-thoughts">Preact Thoughts</h2>
 
-<p>I&rsquo;ve been using react for about two years. As an old-school software developer I&rsquo;ve found it difficult to reason about although most developers say that is exactly why you should use react.</p>
+<p>I&rsquo;ve been using preact for about two years. As an old-school software developer I&rsquo;ve found it difficult to reason about although most developers say that is exactly why you should use preact.</p>
 
-<p>This setup process is pretty complex. I&rsquo;d be hesitant to use react for any small projects. It took me well over an hour to setup this minimal framework, although I was also documenting it in this blog post as I did the setup.</p>
+<p>This setup process is pretty complex. I&rsquo;d be hesitant to use preact for any small projects. It took me well over an hour to setup this minimal framework, although I was also documenting it in this blog post as I did the setup.</p>
 
-<p>On the development machine you now have the following packages installed. Pretty much all of them are necessary to work in react. That&rsquo;s not technically true, you can use react without this stuff, but no one works that way. So, here&rsquo;s the list of software you&rsquo;ve installed to make all this happen.</p>
+<p>On the development machine you now have the following packages installed. Pretty much all of them are necessary to work in preact. That&rsquo;s not technically true, you can use preact without this stuff, but no one works that way. So, here&rsquo;s the list of software you&rsquo;ve installed to make all this happen.</p>
 
 <pre><code>- npm
 - yarn
 - babel
 - webpack
-- react
+- preact
 </code></pre>
 
 <p>Each of these packages has a fairly long learning curve and each of them have their own list of dependencies. I&rsquo;m going to ignore npm and yarn for now, since I assumed you already had them. Babel and Webpack, however, install a LOT of stuff.</p>
@@ -609,7 +610,7 @@ export default Counter;
 
 <pre><code>- babel (112)
 - webpack (285)
-- react (18)
+- preact (?)
 </code></pre>
 
 <p>Lucky for you these are only necessary for development and not for deployment. You&rsquo;ll be deploying just the <code>www</code> directory. That directory contains only the following 2 files.</p>
@@ -618,17 +619,11 @@ export default Counter;
 - index.html
 </code></pre>
 
-<p>You&rsquo;ll notice, however, that your package.js file is something like 722K. Whoa! A <code>Hello World</code> react app is three quarters of a meg of JS code. Imagine sending that to a bunch of mobile devices with crappy connections. Sure it&rsquo;ll be gzipped, but still, this is large.</p>
-
-<p>The package.js is not minified yet. You&rsquo;ll probably want to change that in your webpack settings.</p>
-
-<p>You might also be able to bring in react in a more efficient way. At least then, users who have already visited a react based might will have cashed it.</p>
-
-<p>There are smaller alternatives, such as preact, and I may explore those in the future.</p>
+<p>In react the transpiled package.js file was 722K. Using preact, it&rsquo;s just 136B! Yes, that&rsquo;s bytes, not kilobytes. And that&rsquo;s without the package.js file minified yet.</p>
 
 <h2 id="links">Links</h2>
 
-<p><a href="https://facebook.github.io/react/">React</a><br />
+<p>[Preact]()
 <a href="http://andrewhfarmer.com/build-your-own-starter/#0-intro">Build Your Own Starter</a></p>
 
   </div>
@@ -642,16 +637,14 @@ export default Counter;
             <li>There are no comments yet.</li>
         
     </ul>
-    <p><a href="mailto:joel@joeldare.com?subject=Comment - Create%20a%20React%20App%20from%20Scratch&body=Name: %0D%0A%0D%0AComment: %0D%0A" target="_top">Add Comment</a></p>
+    <p><a href="mailto:joel@joeldare.com?subject=Comment - Create%20a%20Preact%20App%20from%20Scratch&body=Name: %0D%0A%0D%0AComment: %0D%0A" target="_top">Add Comment</a></p>
 </div>
 
 
   <div id=links>
     
-      <a class="basic-alignment left" href="https://www.joeldare.com/blog/post/comments-on-a-static-site/">&laquo; How I Implemented Comments on a Static Site</a>
+      <a class="basic-alignment left" href="https://www.joeldare.com/blog/post/create-a-react-app/">&laquo; Create a React App from Scratch</a>
     
-    
-      <a class="basic-alignment left" href="https://www.joeldare.com/blog/post/create-preact-app/">Create a Preact App from Scratch &raquo;</a>
     
   </div>
 </section>
