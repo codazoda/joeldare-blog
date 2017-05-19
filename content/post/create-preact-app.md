@@ -8,7 +8,7 @@ I wrote these instructions after having written my previous instructions [Create
 
 A basic preact application needs npm, yarn, babel, and webpack. This is a step by step guide to installing these things and setting up a minimal initial preact project.
 
-I'll assume you have npm and yarn already installed. Go install those if you don't regularly use them. You can substitute npm commands for the yarn commands below, if you like. `yarn add <package>` becomes `npm install --save <package>`. `yarn add <package> --dev` becomes `npm install --save-dev <package>`. But, I use yarn so my instructions are tailored to it.
+I'll assume you have npm and yarn already installed. Go install those if you don't regularly use them. You can substitute npm commands for the yarn commands below, if you like. I use yarn so my instructions are tailored to it.
 
 ## Setup Directory
 
