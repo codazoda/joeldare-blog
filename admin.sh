@@ -43,6 +43,7 @@ case $CHAR in
     add .
     commit -m 'add/edit a post and regenerate'
     ssh root@joeldare.com "cd /var/www/joeldare-blog;git pull"
+    ;;
   q)
     echo Then why even start?
     echo
