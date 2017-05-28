@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <base href="https://www.joeldare.com/blog">
+    
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400|Old+Standard+TT:400' rel='stylesheet' type='text/css'>
+
+    <link rel="icon" type="image/png" href="/favicon_16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon_32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon_128x128.png" sizes="128x128">
+
+    <title>
+      
+      
+         Wireless BBS 
+      
+    </title>
+    <link rel="canonical" href="https://www.joeldare.com/blog/post/wireless-bbs/">
+
+    <style>
+  * {
+    border:0;
+    font:inherit;
+    font-size:100%;
+    vertical-align:baseline;
+    margin:0;
+    padding:0;
+    color: black;
+  }
+
+  body {
+    font-family:'Open Sans', 'Myriad Pro', Myriad, sans-serif;
+    font-size:17px;
+    line-height:160%;
+    color:#1d1313;
+    max-width:700px;
+    margin:auto;
+  }
+
+  p {
+    margin: 20px 0;
+  }
+
+  a img {
+    border:none;
+  }
+
+  img {
+    margin: 10px auto 10px auto;
+    max-width: 100%;
+    display: block;
+  }
+
+  pre, code {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    background-color: #f7f7f7;
+  }
+
+  code {
+    font-size: 12px;
+    padding: 4px;
+  }
+
+  pre {
+    margin-top: 0;
+    margin-bottom: 16px;
+    word-wrap: normal;
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+  }
+
+  pre>code {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    word-break: normal;
+    white-space: pre;
+    background: transparent;
+    border: 0;
+  }
+
+  pre code {
+    display: inline;
+    max-width: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0;
+  }
+
+  pre code::before,
+  pre code::after {
+    content: normal;
+  }
+
+  em,q,em,dfn {
+    font-style:italic;
+  }
+
+  .sans,html .gist .gist-file .gist-meta {
+    font-family:"Open Sans","Myriad Pro",Myriad,sans-serif;
+  }
+
+  .mono,pre,code,tt,p code,li code {
+    font-family:Menlo,Monaco,"Andale Mono","lucida console","Courier New",monospace;
+  }
+
+  strong {
+    font-weight:600;
+  }
+
+  q:before {
+    content:"\201C";
+  }
+
+  q:after {
+    content:"\201D";
+  }
+
+  del,s {
+    text-decoration:line-through;
+  }
+
+  blockquote {
+    font-family:"Old Standard TT",serif;
+    text-align:center;
+    padding:50px;
+  }
+
+  blockquote p {
+    display:inline-block;
+    font-style:italic;
+  }
+
+  blockquote:before,blockquote:after {
+    font-family:"Old Standard TT",serif;
+    content:'\201C';
+    font-size:35px;
+    color:#403c3b;
+  }
+
+  blockquote:after {
+    content:'\201D';
+  }
+
+  hr {
+    width:40%;
+    height: 1px;
+    background:#403c3b;
+    margin: 25px auto;
+  }
+
+  h1 {
+    font-size:35px;
+  }
+
+  h2 {
+    font-size:28px;
+  }
+
+  h3 {
+    font-size:22px;
+    margin-top:18px;
+  }
+
+  h1 a,h2 a,h3 a {
+    text-decoration:none;
+  }
+
+  h1,h2 {
+    margin-top:28px;
+  }
+
+  #sub-header, time {
+    color:#403c3b;
+    font-size:13px;
+  }
+
+  #sub-header {
+    margin: 0 4px;
+  }
+
+  #nav h1 a {
+    font-size:35px;
+    color:#1d1313;
+    line-height:120%;
+  }
+
+  .posts_listing a,#nav a {
+    text-decoration: none;
+  }
+
+  li {
+    margin-left: 20px;
+  }
+
+  ul li {
+    margin-left: 5px;
+  }
+
+  ul li {
+    list-style-type: none;
+  }
+  ul li:before {
+    content:"\00BB \0020";
+  }
+
+  #nav ul li:before, .posts_listing li:before {
+    content:'';
+    margin-right:0;
+  }
+
+  #content {
+    text-align:left;
+    width:100%;
+    font-size:15px;
+    padding:60px 0 80px;
+  }
+
+  #content h1,#content h2 {
+    margin-bottom:5px;
+  }
+
+  #content h2 {
+    font-size:25px;
+  }
+
+  #content .entry-content {
+    margin-top:15px;
+  }
+
+  #content time {
+    margin-left:3px;
+  }
+
+  #content h1 {
+    font-size:30px;
+  }
+
+  .highlight {
+    margin: 10px 0;
+  }
+
+  .posts_listing {
+    margin:0 0 50px;
+  }
+
+  .posts_listing li {
+    margin:0 0 25px 15px;
+  }
+
+  .posts_listing li a:hover,#nav a:hover {
+    text-decoration: underline;
+  }
+
+  #nav {
+    text-align:center;
+    position:static;
+    margin-top:60px;
+  }
+
+  #nav ul {
+    display: table;
+    margin: 8px auto 0 auto;
+  }
+
+  #nav li {
+    list-style-type:none;
+    display:table-cell;
+    font-size:15px;
+    padding: 0 20px;
+  }
+
+  #links {
+    margin: 50px 0 0 0;
+  }
+
+  #links :nth-child(2) {
+    float:right;
+  }
+
+  #not-found {
+    text-align: center;
+  }
+
+  #not-found a {
+    font-family:"Old Standard TT",serif;
+    font-size: 200px;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 225px;
+  }
+
+  @media (max-width: 750px) {
+    body {
+      padding-left:20px;
+      padding-right:20px;
+    }
+
+    #nav h1 a {
+      font-size:28px;
+    }
+
+    #nav li {
+      font-size:13px;
+      padding: 0 15px;
+    }
+
+    #content {
+      margin-top:0;
+      padding-top:50px;
+      font-size:14px;
+    }
+
+    #content h1 {
+      font-size:25px;
+    }
+
+    #content h2 {
+      font-size:22px;
+    }
+
+    .posts_listing li div {
+      font-size:12px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    body {
+      padding-left:20px;
+      padding-right:20px;
+    }
+
+    #nav h1 a {
+      font-size:22px;
+    }
+
+    #nav li {
+      font-size:12px;
+      padding: 0 10px;
+    }
+
+    #content {
+      margin-top:0;
+      padding-top:20px;
+      font-size:12px;
+    }
+
+    #content h1 {
+      font-size:20px;
+    }
+
+    #content h2 {
+      font-size:18px;
+    }
+
+    .posts_listing li div{
+      font-size:12px;
+    }
+  }
+</style>
+
+
+    
+  </head>
+
+  <body>
+    <section id=nav>
+      <h1><a href="">Joel Dare</a></h1>
+      <ul>
+        
+          <li><a href="mailto:joel@joeldare.com">Email</a></li>
+        
+          <li><a href="https://github.com/codazoda">Github</a></li>
+        
+          <li><a href="https://www.joeldare.com/wiki">Wiki</a></li>
+        
+      </ul>
+    </section>
+
+
+<section id=content>
+  <h1> Wireless BBS </h1>
+
+  <div id=sub-header>
+    Created May 2017
+  </div>
+
+  <div class="entry-content">
+    
+
+<h2 id="introduction">Introduction</h2>
+
+<p>I&rsquo;m inspired by the nostalgia of the BBS systems of my youth and by the high cost of modern Internet service providers. By the impending loss of net neutrality in the United States and by the widespread spying of worldwide governments on their citizens and corporations on their customers.</p>
+
+<p>Wireless BBS is a configuration suggestion for local operators who wish to share websites with their communities without connection costs. It describes a simple setup for using relatively cheap off-the-shelf consumer WiFi routers to communicate with your close neighbors using a web browser. It also describes a method of using the git version control software for mirroring data across systems who wish to coordinate.</p>
+
+<p>Data storage and bandwidth are a burden of the Wireless BBS operator. Bandwidth is limited only by the WiFi router and storage is limited by the disk space the operator chooses to setup and the networks he joins.</p>
+
+<h2 id="wireless-bbs-operator-setup">Wireless BBS Operator Setup</h2>
+
+<p>Here are the typical steps to setup a Wireless BBS system.</p>
+
+<ul>
+<li>Setup a WiFi router on 192.168.1.x</li>
+<li>Set the SSID broadcast to bbs-{whatever}</li>
+<li>Set the password to bbs-{whatever}</li>
+<li>Disable the Internet connection</li>
+<li>Setup a web server on 192.168.1.227</li>
+<li>Setup a DNS server that always returns 192.168.1.227
+<br /></li>
+</ul>
+
+<p>Your SSID should begin with <code>bbs-</code> such as <code>bbs-poizon</code> or <code>bbs-joeldare</code>. This will make the systems more obvious to users who are browsing for available hotspots and organize them together alphabetically in common wifi lists.</p>
+
+<p>Wireless BBS systems are off-line. They should not provide the user a connection to the Internet. This prevents tracking of an individuals movements by systems connected to the Internet (such as Google Analytics). Users can bypass this and provide their own internet connections from a second network interface but doing so is not recommended if privacy is a concern.</p>
+
+<p>Setting the hotspot to have a password that matches the SSID broadcast name allows anyone, who knows how the system works, to connect to it while still allowing the data to be encrypted in transit. It does so without requiring commercial routers or complicated configurations.</p>
+
+<h2 id="client-setup">Client Setup</h2>
+
+<p>Consumers of local Wireless BBS systems simply connect to them, like they would any hotspot, and point their web browser at any domain name. You can connect from anything that supports WiFi and includes a browser such as a computer or mobile phone.</p>
+
+<ul>
+<li>Connect to any visible <code>bbs-</code> wifi hotspot</li>
+<li>Enter the hotspot name as the password</li>
+<li>Point your browser at 192.168.1.227 or any domain name</li>
+</ul>
+
+<h2 id="special-dns-server">Special DNS Server</h2>
+
+<p>A very simple DNS server will be created. The DNS server will respond to every request with an A record pointed to 192.168.1.227. If someone connects to a Wireless BBS system, and tries to access any domain name, they will be directed to the BBS server instead. See the PHP DNS Server listed below as a minimalist example.</p>
+
+<h2 id="network-setup">Network Setup</h2>
+
+<p>Anyone can create and organize a network of other Wireless BBS systems simply by making the files available via git. Whenever members of a network connect to the same WiFi network they can sync that information. A Wireless BBS operator can sync with multiple networks. Wasatch Net is such a network which contains a list of static blog posts from Wireless BBS operators along the Wasatch Front. Network information can be exchanged peer-to-peer using git or over the Internet using a central repository such as GitHub. Networks can each set their own rules about what types of information they will exchange with each other and what system requirements they will impose on any operator who chooses to include the network on their system.</p>
+
+<h2 id="other-thoughts">Other Thoughts</h2>
+
+<p>The computer running the Wireless BBS should run on IP 192.168.1.227. The number <code>227</code> is <code>BBS</code> on an old telephone keypad. Since a DNS service will return the operators IP for any domain name, the IP addresses are not necessarily a strict requirement.</p>
+
+<p>Each networks can decide how they will deal with name conflicts. The policy used by npm may be a good default. This policy says that the first person to use a name wins; at least until the lawyers get involved.</p>
+
+<p>Multiple people can connect to a single Wireless BBS at a time because it&rsquo;s a simple WiFi network. Typical home WiFi routers, however, have a very limited range. This can be improved with higher powered wifi routers supporting pointed antennas in places where it makes sense to do so. Some WiFi routers can cover line of sight distances of miles. Routers with antennas mounted on a hill can cover fairly wide distances and sometimes entire valley&rsquo;s.</p>
+
+<p>Wireless BBS operators can choose the OS and server software they wish to run.</p>
+
+<p>Wireless BBS systems only support static web pages by default, however different networks can implement their own system requirements (i.e. Wasatch Net requires operators to add support for PHP).</p>
+
+<p>Networks can implement build systems or monitoring systems that do things such as search their repos and remove code that might contact the Internet.</p>
+
+<p>SSL should be used for all connections. There should be a self-signed certificate authority that can be added to browsers so that SSL can be used without the certificate authorities. This would provide encryption but not verification. This could be for the entire network, at the local network level, or on a single machine.</p>
+
+<h2 id="networks">Networks</h2>
+
+<p>Here are a couple theoretical examples of networks that might be setup and shared by Wireless BBS operators.</p>
+
+<p><strong>Wasatch Net</strong></p>
+
+<p>This network might exchange blog posts, comments, and message boards for users along the Wasatch Front where I reside. It might also require Wireless BBS systems that choose to be part of the network to support PHP.</p>
+
+<p><strong>Movie Net</strong></p>
+
+<p>This network might exchange full length, legally licensed, movies or shows. Obtaining the rights to distribute movies or shows would be a difficult network organizer problem. Operators would also have very high storage requirements. A digital rights management solution might be required of Wireless BBS systems who support Movie Net.</p>
+
+<p>There are two options for setting up a Wireless BBS system. The first is to set it up in a permanent location. People near this area will be able to find it regularly. The second is to set it up on a mobile computer. The second type would be available only when the laptop is on and it would move from location to location. People who don&rsquo;t typically see this system, however, could use it.</p>
+
+<h2 id="php-dns-server">PHP DNS Server</h2>
+
+<p>I found a minimal DNS server called DNServer. It was written by Cesar Rodas in PHP and released as public domain. I&rsquo;ve created an example <a href="https://github.com/codazoda/bbs-dns">bbs-dns project on GitHub</a> that returns 192.168.1.227 for every DNS request. You can download the files and start the DNS server with the following command.</p>
+
+<pre><code>sudo php example.php
+</code></pre>
+
+  </div>
+
+
+<div>
+    <h2 style="margin-top: 50px;">Comments</h2>
+
+    <ul style="margin-top: 20px;">
+        
+            <li>There are no comments yet.</li>
+        
+    </ul>
+    <p><a href="mailto:joel@joeldare.com?subject=Comment - Wireless%20BBS&body=Name: %0D%0A%0D%0AComment: %0D%0A" target="_top">Add Comment</a></p>
+</div>
+
+
+  <div id=links>
+    
+      <a class="basic-alignment left" href="https://www.joeldare.com/blog/post/create-preact-app/">&laquo; Create a Preact App from Scratch</a>
+    
+    
+  </div>
+</section>
+
+  
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-6888208-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>
+

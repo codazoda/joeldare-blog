@@ -6,10 +6,20 @@
     <description>Recent content in Tech on Joel Dare</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 27 May 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.joeldare.com/blog/tags/tech/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Wireless BBS</title>
+      <link>https://www.joeldare.com/blog/post/wireless-bbs/</link>
+      <pubDate>Sat, 27 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.joeldare.com/blog/post/wireless-bbs/</guid>
+      <description>Introduction I&amp;rsquo;m inspired by the nostalgia of the BBS systems of my youth and by the high cost of modern Internet service providers. By the impending loss of net neutrality in the United States and by the widespread spying of worldwide governments on their citizens and corporations on their customers.
+Wireless BBS is a configuration suggestion for local operators who wish to share websites with their communities without connection costs.</description>
+    </item>
     
     <item>
       <title>Create a Preact App from Scratch</title>
