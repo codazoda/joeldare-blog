@@ -22,6 +22,6 @@ I could only reach the bottom parts of the coil, but I noticed that the dust was
 
 ![Cleaning A/C Coil](/blog/image/cleaning-ac-coil.jpg)
 
-I reached inside and slowly peeled the sheet away from one edge to the next. I moved slowly, being careful not to teal the sheet the dust had formed. After two hours, I had the coil pretty clean.
+I reached inside and slowly peeled the sheet away from one edge to the next by hand. I moved slowly, being careful not to teal the sheet the dust had formed. After two hours, I had the coil pretty clean.
 
 I buttoned everything back up and give the system a try. The A/C was working like new again.
