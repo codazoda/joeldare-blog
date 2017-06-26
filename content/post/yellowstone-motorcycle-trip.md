@@ -5,6 +5,8 @@ tags: ["motorcycle"]
 ---
 I'm planning to ride my motorcycle, a small Suzuki TU250X through Yellowstone National Park. It's a three day trip and I should put around 300 miles on the bike. It's the longest ride I've done on a motorcycle and a long ride for a 250cc bike with a 240 lb rider and camping gear. This will be both my first multiple day ride and my first motorcycle camping trip. I will be traveling alone.
 
+![Suzuki TU250X](/blog/image/suzuki-tu250x.jpg)
+
 ## Day 1
 
 I'll load the motorcycle into the back of my truck and drive from Roy, UT to Jackson Hole, WY. The initial drive is just over 4 hours.
