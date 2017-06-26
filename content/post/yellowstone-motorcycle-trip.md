@@ -9,11 +9,9 @@ I'm planning to ride my motorcycle, a small Suzuki TU250X through Yellowstone Na
 
 ## Day 1
 
-I'll load the motorcycle into the back of my truck and drive from Roy, UT to Jackson Hole, WY. The initial drive is just over 4 hours.
+I'll load the motorcycle into the back of my truck and drive from Roy, UT to Jackson Hole, WY. The initial drive is just over 4 hours. There is a 48-hour [parking garage](https://townofjackson.com/about-jackson/public-parking/) in Jackson Hole. I plan to unload the motorcycle and then leave the truck in this garage. You can also park on any road outside of the city for 72-hours.
 
 ![Roy UT to Jackson WY](/blog/image/roy-to-jackson.png)
-
-There is a 48-hour [parking garage](https://townofjackson.com/about-jackson/public-parking/) in Jackson Hole. I plan to unload the motorcycle and then leave the truck in this garage. You can also park on any road outside of the city for 72-hours.
 
 From here I'll drive the motorcycle North along the Tetons. I'll stop only twice, at Menors Ferry District and then at the Jenny Lake Overlook. Total ride is 96 miles and will take 2 hours 30 minutes not including stops.
 
