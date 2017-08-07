@@ -81,6 +81,16 @@ I&amp;rsquo;ll assume you have npm and yarn already installed. Go install those 
     </item>
     
     <item>
+      <title>My Ham Memory Channels</title>
+      <link>https://www.joeldare.com/blog/post/my-ham-memory-channels/</link>
+      <pubDate>Sun, 07 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.joeldare.com/blog/post/my-ham-memory-channels/</guid>
+      <description>My HAM Memory Channels This is a list of my own HAM radio memory channels. The majority of these will be for repeaters near my home in Roy, UT.
+   Ch Frequency PL Name Location     001 147.040 + 123.0 DCARC Repeater Antelope Island   002 146.900 - 123.0 OARC Repeater Mount Ogden   003 447.200 - 127.3 DCARC Repeater Antelope Island   004 448.</description>
+    </item>
+    
+    <item>
       <title>How to Code</title>
       <link>https://www.joeldare.com/blog/post/how-to-code/</link>
       <pubDate>Tue, 07 Jun 2016 00:00:00 +0000</pubDate>
@@ -112,6 +122,15 @@ In my case, the CSV files are in the following format:
 &amp;quot;field1&amp;quot;,&amp;quot;field2&amp;quot;,&amp;quot;field3&amp;quot;  To view the 3rd field of every line, you can use the following command.
 awk -F &amp;quot;\&amp;quot;*,\&amp;quot;*&amp;quot; &#39;{print $3}&#39; file.csv  As another example, take the following pipe delimited format:
 field1|field2|field3  To view the 2nd field of every line, you can use the following command.</description>
+    </item>
+    
+    <item>
+      <title>New Post</title>
+      <link>https://www.joeldare.com/blog/post/template-new-post/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.joeldare.com/blog/post/template-new-post/</guid>
+      <description>&amp;hellip;</description>
     </item>
     
   </channel>

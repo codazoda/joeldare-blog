@@ -18,3 +18,7 @@ googleAnalytics = "UA-6888208-1"
 [[menu.main]]
     name = "Wiki"
     url  = "https://www.joeldare.com/wiki"
+
+[taxonomies]
+    tag = "tags"
+    category = "categories"

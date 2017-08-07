@@ -37,6 +37,11 @@
   </url>
   
   <url>
+    <loc>https://www.joeldare.com/blog/post/my-ham-memory-channels/</loc>
+    <lastmod>2016-08-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.joeldare.com/blog/post/how-to-code/</loc>
     <lastmod>2016-06-07T00:00:00+00:00</lastmod>
   </url>
@@ -69,6 +74,12 @@
   </url>
   
   <url>
+    <loc>https://www.joeldare.com/blog/tags/ham/</loc>
+    <lastmod>2016-08-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.joeldare.com/blog/tags/home/</loc>
     <lastmod>2017-06-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -96,6 +107,10 @@
     <loc>https://www.joeldare.com/blog/tags/motorcycle/</loc>
     <lastmod>2017-06-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.joeldare.com/blog/post/template-new-post/</loc>
   </url>
   
   <url>
