@@ -1,5 +1,5 @@
 ---
-date: "2016-08-07"
+date: "2017-08-07"
 title: "My Ham Memory Channels"
 tags: ["ham"]
 ---
