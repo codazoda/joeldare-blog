@@ -4,8 +4,6 @@ title: "My Ham Memory Channels"
 tags: ["ham"]
 ---
 
-# My HAM Memory Channels
-
 This is a list of my own HAM radio memory channels. The majority of these will be for repeaters near my home in Roy, UT.
 
 | Ch  | Frequency | PL    | Name           | Location         |
