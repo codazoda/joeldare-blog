@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.joeldare.com/blog/post/migrane-headache-solved-with-lisinopril/</loc>
+    <lastmod>2017-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.joeldare.com/blog/post/add-a-repeater-to-memory-on-a-baofeng-uv-5r/</loc>
     <lastmod>2017-08-07T00:00:00+00:00</lastmod>
   </url>
@@ -85,6 +90,12 @@
   </url>
   
   <url>
+    <loc>https://www.joeldare.com/blog/tags/health/</loc>
+    <lastmod>2017-10-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.joeldare.com/blog/tags/home/</loc>
     <lastmod>2017-06-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -104,7 +115,7 @@
   
   <url>
     <loc>https://www.joeldare.com/blog/</loc>
-    <lastmod>2017-08-07T00:00:00+00:00</lastmod>
+    <lastmod>2017-10-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -116,7 +127,7 @@
   
   <url>
     <loc>https://www.joeldare.com/blog/post/</loc>
-    <lastmod>2017-08-07T00:00:00+00:00</lastmod>
+    <lastmod>2017-10-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
