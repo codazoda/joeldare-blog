@@ -12,7 +12,7 @@ He pulled the coil a few inches and looked at it with a flashlight. Completely g
 
 I pulled the unit out a few inches, as far as I dared without bending the coolant pipes much. I had just enough room to reach my hand inside.
 
-![Central Air Conditioning Coil](/blog/image/ac-coil.jpg)
+![Central Air Conditioning Coil](../static/image/ac-coil.jpg)
 
 I used a toilet brush on a long piece of dowel, which I actually cut from a plastic hanger. I was improvising, trying to avoid a trip to the hardware store.
 
