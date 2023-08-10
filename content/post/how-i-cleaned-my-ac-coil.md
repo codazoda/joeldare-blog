@@ -16,11 +16,11 @@ I pulled the unit out a few inches, as far as I dared without bending the coolan
 
 I used a toilet brush on a long piece of dowel, which I actually cut from a plastic hanger. I was improvising, trying to avoid a trip to the hardware store.
 
-![Extended Toilet Brush](/blog/image/extended-toilet-brush.jpg)
+![Extended Toilet Brush](/static/image/extended-toilet-brush.jpg)
 
 I could only reach the bottom parts of the coil, but I noticed that the dust was hanging off like a sheet.
 
-![Cleaning A/C Coil](/blog/image/cleaning-ac-coil.jpg)
+![Cleaning A/C Coil](/static/image/cleaning-ac-coil.jpg)
 
 I reached inside and slowly peeled the sheet away from one edge to the next by hand. I moved slowly, being careful not to teal the sheet the dust had formed. After two hours, I had the coil pretty clean.
 
